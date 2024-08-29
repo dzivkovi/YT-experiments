@@ -1,0 +1,6903 @@
+1
+00:00:29,560 --> 00:00:31,960
+he
+
+2
+00:00:34,960 --> 00:00:37,960
+t
+
+3
+00:00:38,910 --> 00:00:42,050
+[Music]
+
+4
+00:00:50,710 --> 00:01:06,309
+[Music]
+
+5
+00:01:10,960 --> 00:01:20,900
+[Music]
+
+6
+00:01:26,330 --> 00:01:28,920
+[Music]
+
+7
+00:01:28,920 --> 00:01:31,870
+w oh
+
+8
+00:01:31,870 --> 00:01:36,120
+[Music]
+
+9
+00:01:38,320 --> 00:01:53,950
+[Music]
+
+10
+00:01:57,910 --> 00:02:05,269
+[Music]
+
+11
+00:02:07,290 --> 00:02:11,110
+[Music]
+
+12
+00:02:15,750 --> 00:02:25,680
+[Music]
+
+13
+00:02:29,120 --> 00:02:31,120
+2 o
+
+14
+00:02:31,120 --> 00:02:40,910
+[Music]
+
+15
+00:02:43,100 --> 00:02:58,729
+[Music]
+
+16
+00:03:00,820 --> 00:03:05,080
+[Music]
+
+17
+00:03:24,330 --> 00:03:27,489
+[Music]
+
+18
+00:03:28,159 --> 00:03:31,000
+w
+
+19
+00:03:31,000 --> 00:03:34,000
+w
+
+20
+00:03:45,370 --> 00:03:58,590
+[Music]
+
+21
+00:04:03,230 --> 00:04:13,169
+[Music]
+
+22
+00:04:18,610 --> 00:04:28,389
+[Music]
+
+23
+00:04:30,590 --> 00:04:45,280
+[Music]
+
+24
+00:04:45,280 --> 00:04:48,280
+he
+
+25
+00:04:48,300 --> 00:04:51,559
+[Music]
+
+26
+00:04:59,140 --> 00:05:02,260
+[Music]
+
+27
+00:05:34,580 --> 00:05:53,699
+[Music]
+
+28
+00:05:58,639 --> 00:06:02,070
+he a
+
+29
+00:06:02,070 --> 00:06:15,040
+[Music]
+
+30
+00:06:26,150 --> 00:06:32,699
+[Music]
+
+31
+00:06:36,160 --> 00:06:39,080
+hello everyone and welcome to another
+
+32
+00:06:39,080 --> 00:06:41,759
+exciting episode of our innovators live
+
+33
+00:06:41,759 --> 00:06:43,960
+series I'm Chloe Condon and I'm your
+
+34
+00:06:43,960 --> 00:06:46,440
+host each week as we talk to interesting
+
+35
+00:06:46,440 --> 00:06:49,039
+people who are doing amazing things with
+
+36
+00:06:49,039 --> 00:06:51,440
+Google Cloud products and this week is
+
+37
+00:06:51,440 --> 00:06:54,199
+no exception uh of course this week's
+
+38
+00:06:54,199 --> 00:06:56,400
+topic is anthropics cloud models on
+
+39
+00:06:56,400 --> 00:06:58,120
+vertex AI we're going to be talking
+
+40
+00:06:58,120 --> 00:07:00,280
+about prompt engineering and doing a
+
+41
+00:07:00,280 --> 00:07:03,360
+deep dive into best practices but let's
+
+42
+00:07:03,360 --> 00:07:07,080
+go over our agenda today of course uh we
+
+43
+00:07:07,080 --> 00:07:10,440
+will be doing a Vertex AI overview we're
+
+44
+00:07:10,440 --> 00:07:12,160
+then going to be doing an anthropic
+
+45
+00:07:12,160 --> 00:07:14,680
+overview to get an idea of what that is
+
+46
+00:07:14,680 --> 00:07:17,039
+and how that works we'll then move over
+
+47
+00:07:17,039 --> 00:07:20,360
+to prompting Claud very exciting topic
+
+48
+00:07:20,360 --> 00:07:21,720
+and then we'll talk about training
+
+49
+00:07:21,720 --> 00:07:25,120
+prompts and move on to rag architecture
+
+50
+00:07:25,120 --> 00:07:28,120
+and tips now remember if you have any
+
+51
+00:07:28,120 --> 00:07:30,240
+questions today throughout the session
+
+52
+00:07:30,240 --> 00:07:33,080
+we have a handy dandy chat available and
+
+53
+00:07:33,080 --> 00:07:34,960
+if one of our moderators doesn't answer
+
+54
+00:07:34,960 --> 00:07:37,160
+your question then we may answer your
+
+55
+00:07:37,160 --> 00:07:39,280
+question live on air at the very end of
+
+56
+00:07:39,280 --> 00:07:41,400
+the stream so make sure to stay tuned
+
+57
+00:07:41,400 --> 00:07:43,120
+for the whole thing you may see your
+
+58
+00:07:43,120 --> 00:07:46,520
+question answered live on air so let's
+
+59
+00:07:46,520 --> 00:07:50,360
+do a little bit of a review of what it
+
+60
+00:07:50,360 --> 00:07:53,120
+takes to to drive business value with
+
+61
+00:07:53,120 --> 00:07:55,879
+geni it takes much more than just a
+
+62
+00:07:55,879 --> 00:07:58,159
+model to be able to do that and within
+
+63
+00:07:58,159 --> 00:08:01,000
+vertex AI you have access to our agent
+
+64
+00:08:01,000 --> 00:08:03,400
+Builder our model builder and our model
+
+65
+00:08:03,400 --> 00:08:05,159
+garden tools so whether you're looking
+
+66
+00:08:05,159 --> 00:08:08,919
+to prompt or serve or tune uh use our
+
+67
+00:08:08,919 --> 00:08:10,599
+retrieval engines maybe you want to
+
+68
+00:08:10,599 --> 00:08:12,960
+train or just need a single place to
+
+69
+00:08:12,960 --> 00:08:15,800
+discover and customize and deploy a wide
+
+70
+00:08:15,800 --> 00:08:18,360
+variety of models from Google or from
+
+71
+00:08:18,360 --> 00:08:21,080
+our Google Partners vertex AI offers
+
+72
+00:08:21,080 --> 00:08:23,039
+support and we're going to be diving
+
+73
+00:08:23,039 --> 00:08:25,599
+deeper into a little bit more of that
+
+74
+00:08:25,599 --> 00:08:29,879
+today but what is it vertex model Garden
+
+75
+00:08:29,879 --> 00:08:31,520
+of course is a single environment where
+
+76
+00:08:31,520 --> 00:08:34,000
+you can do everything from search for
+
+77
+00:08:34,000 --> 00:08:36,519
+models you can use it directly to test
+
+78
+00:08:36,519 --> 00:08:38,519
+models in an environment you can
+
+79
+00:08:38,519 --> 00:08:41,320
+finetune and play around and create
+
+80
+00:08:41,320 --> 00:08:43,320
+models without code and then of course
+
+81
+00:08:43,320 --> 00:08:45,760
+you can use in notebooks so that means
+
+82
+00:08:45,760 --> 00:08:48,480
+using our vertex AI workbench and use
+
+83
+00:08:48,480 --> 00:08:50,680
+models inside of a
+
+84
+00:08:50,680 --> 00:08:54,000
+notebook and of of course to bring us
+
+85
+00:08:54,000 --> 00:08:56,600
+full circle to today's topic anthropics
+
+86
+00:08:56,600 --> 00:08:59,480
+Cloud models are available on vertex AI
+
+87
+00:08:59,480 --> 00:09:02,880
+model Garden who knew so in order to
+
+88
+00:09:02,880 --> 00:09:05,000
+supercharge this this power of
+
+89
+00:09:05,000 --> 00:09:07,519
+anthropics cloud models on vertex Ai and
+
+90
+00:09:07,519 --> 00:09:09,839
+learn all about prompt engineering we
+
+91
+00:09:09,839 --> 00:09:12,320
+have an extra special guest in fact this
+
+92
+00:09:12,320 --> 00:09:15,600
+is an innovators live first we have
+
+93
+00:09:15,600 --> 00:09:17,560
+someone from anthropic joining us today
+
+94
+00:09:17,560 --> 00:09:20,040
+to give us the real scoop on the best
+
+95
+00:09:20,040 --> 00:09:22,200
+practices of how to be using this so
+
+96
+00:09:22,200 --> 00:09:23,519
+without further Ado I'm going to
+
+97
+00:09:23,519 --> 00:09:26,279
+introduce Our Guest today welcome Ellie
+
+98
+00:09:26,279 --> 00:09:28,480
+shopic who is a member of the technical
+
+99
+00:09:28,480 --> 00:09:31,399
+staff at anthropic welcome Ellie thank
+
+100
+00:09:31,399 --> 00:09:33,000
+you so much Chloe for having me I'm
+
+101
+00:09:33,000 --> 00:09:34,600
+super excited to be here talk a little
+
+102
+00:09:34,600 --> 00:09:36,440
+bit about how you can use anthropic on
+
+103
+00:09:36,440 --> 00:09:37,920
+vertex a little bit more about our
+
+104
+00:09:37,920 --> 00:09:40,160
+company and then really dive into prompt
+
+105
+00:09:40,160 --> 00:09:42,120
+engineering which gonna really try to do
+
+106
+00:09:42,120 --> 00:09:44,399
+my best to turn this more into a science
+
+107
+00:09:44,399 --> 00:09:46,120
+and a little bit less of maybe the art
+
+108
+00:09:46,120 --> 00:09:48,160
+form that you might think so without
+
+109
+00:09:48,160 --> 00:09:49,800
+further Ado I just want to hop for a
+
+110
+00:09:49,800 --> 00:09:51,519
+quick second and talk about who we are
+
+111
+00:09:51,519 --> 00:09:52,880
+sure many of you are familiar with the
+
+112
+00:09:52,880 --> 00:09:55,160
+models that we have but who we are as a
+
+113
+00:09:55,160 --> 00:09:57,279
+company we are an AI safety and research
+
+114
+00:09:57,279 --> 00:09:59,360
+lab and our mission is to ensure trans
+
+115
+00:09:59,360 --> 00:10:01,200
+formative AI helps people and Society
+
+116
+00:10:01,200 --> 00:10:03,680
+flourish we do that by building Frontier
+
+117
+00:10:03,680 --> 00:10:06,279
+systems and also studying them working
+
+118
+00:10:06,279 --> 00:10:08,560
+responsibly to deploy them and are being
+
+119
+00:10:08,560 --> 00:10:10,839
+very intentional with the research and
+
+120
+00:10:10,839 --> 00:10:13,560
+science that we share our goal is to
+
+121
+00:10:13,560 --> 00:10:16,279
+create models that are helpful harmless
+
+122
+00:10:16,279 --> 00:10:18,560
+and honest and we do our absolute best
+
+123
+00:10:18,560 --> 00:10:20,760
+in the training and fine-tuning process
+
+124
+00:10:20,760 --> 00:10:22,600
+to ensure that is the case while also
+
+125
+00:10:22,600 --> 00:10:24,200
+building very highly intelligent
+
+126
+00:10:24,200 --> 00:10:27,279
+Frontier models we've been really really
+
+127
+00:10:27,279 --> 00:10:29,320
+proud of the ability that we've had to
+
+128
+00:10:29,320 --> 00:10:31,640
+to innovate as not a lot of time has
+
+129
+00:10:31,640 --> 00:10:34,040
+gone on so really since uh 2023 when we
+
+130
+00:10:34,040 --> 00:10:35,560
+launched some of the much earlier models
+
+131
+00:10:35,560 --> 00:10:37,440
+all the way until now it's been only
+
+132
+00:10:37,440 --> 00:10:38,800
+about three months from launching the
+
+133
+00:10:38,800 --> 00:10:41,279
+Claud 3 family of models Haiku Sonet and
+
+134
+00:10:41,279 --> 00:10:43,519
+Opus to our latest and most intelligent
+
+135
+00:10:43,519 --> 00:10:46,160
+model CLA 35 Sonet so something we're
+
+136
+00:10:46,160 --> 00:10:47,680
+really proud of is in just such a short
+
+137
+00:10:47,680 --> 00:10:49,800
+period of time we're able to really keep
+
+138
+00:10:49,800 --> 00:10:50,959
+up with a tremendous amount of
+
+139
+00:10:50,959 --> 00:10:53,000
+innovation in the space and in many
+
+140
+00:10:53,000 --> 00:10:55,920
+cases lead a lot of that innovation in
+
+141
+00:10:55,920 --> 00:10:58,000
+geni some of the things that you might
+
+142
+00:10:58,000 --> 00:10:59,959
+not know about anthropic one of the uh
+
+143
+00:10:59,959 --> 00:11:02,200
+most important AI Innovations of 2023 as
+
+144
+00:11:02,200 --> 00:11:04,560
+per Time Magazine is a process called
+
+145
+00:11:04,560 --> 00:11:07,560
+constitutional Ai and constitutional AI
+
+146
+00:11:07,560 --> 00:11:09,880
+is where we take in some of the most
+
+147
+00:11:09,880 --> 00:11:12,320
+well uh thought out and discussed
+
+148
+00:11:12,320 --> 00:11:14,040
+principles and documents that we as a
+
+149
+00:11:14,040 --> 00:11:16,120
+society have generated so the UN
+
+150
+00:11:16,120 --> 00:11:17,560
+Declaration of Human Rights Apple's
+
+151
+00:11:17,560 --> 00:11:20,000
+terms of service and we train a special
+
+152
+00:11:20,000 --> 00:11:23,079
+model on that to help anthropic models
+
+153
+00:11:23,079 --> 00:11:25,959
+become harmful harmless helpful and
+
+154
+00:11:25,959 --> 00:11:27,800
+honest so this is a really powerful
+
+155
+00:11:27,800 --> 00:11:29,040
+Innovation that we've made that allows
+
+156
+00:11:29,040 --> 00:11:31,800
+our models to have more aligned outputs
+
+157
+00:11:31,800 --> 00:11:33,600
+improved outputs and focus on that
+
+158
+00:11:33,600 --> 00:11:36,279
+Honesty helpfulness and
+
+159
+00:11:36,279 --> 00:11:38,399
+harmlessness as you've seen many times
+
+160
+00:11:38,399 --> 00:11:39,920
+in the geni space there are many
+
+161
+00:11:39,920 --> 00:11:41,320
+different models there are many
+
+162
+00:11:41,320 --> 00:11:43,440
+different use cases for families of
+
+163
+00:11:43,440 --> 00:11:45,839
+models so in the Enterprise AI space
+
+164
+00:11:45,839 --> 00:11:47,720
+there are many different constraints
+
+165
+00:11:47,720 --> 00:11:50,279
+that you might face from cost to latency
+
+166
+00:11:50,279 --> 00:11:52,839
+or speed as well as intelligence so in
+
+167
+00:11:52,839 --> 00:11:55,160
+the cloud family of models we have quite
+
+168
+00:11:55,160 --> 00:11:57,639
+a few targeting some of the more complex
+
+169
+00:11:57,639 --> 00:11:59,880
+and more intelligent requiring tasks
+
+170
+00:11:59,880 --> 00:12:02,800
+like agents to some of the tools like a
+
+171
+00:12:02,800 --> 00:12:05,040
+basic chat where you want to focus on
+
+172
+00:12:05,040 --> 00:12:07,480
+your efficiency and speed and minimize
+
+173
+00:12:07,480 --> 00:12:09,880
+cost and with that we have our family of
+
+174
+00:12:09,880 --> 00:12:12,600
+models we have Claud 3 Hau which is our
+
+175
+00:12:12,600 --> 00:12:14,920
+fastest most compact model so sitting
+
+176
+00:12:14,920 --> 00:12:16,199
+kind of in that corner of the
+
+177
+00:12:16,199 --> 00:12:18,639
+intelligence and cost chart here we have
+
+178
+00:12:18,639 --> 00:12:20,680
+our Claude 35 Sonet which is our most
+
+179
+00:12:20,680 --> 00:12:22,240
+intelligent model that we recently
+
+180
+00:12:22,240 --> 00:12:24,279
+released that allows kind of the The
+
+181
+00:12:24,279 --> 00:12:26,519
+Best of Both Worlds as well as claw 3
+
+182
+00:12:26,519 --> 00:12:29,240
+Opus which is excellent at writing and
+
+183
+00:12:29,240 --> 00:12:31,199
+more complex tasks a little bit more on
+
+184
+00:12:31,199 --> 00:12:33,920
+the costly end but very intelligent as
+
+185
+00:12:33,920 --> 00:12:36,000
+well so just to give you a I have to say
+
+186
+00:12:36,000 --> 00:12:38,160
+I love these these naming conventions
+
+187
+00:12:38,160 --> 00:12:39,880
+I'm noticing a little bit of a theme a
+
+188
+00:12:39,880 --> 00:12:43,199
+sonnet Haiku and Opus yeah very very
+
+189
+00:12:43,199 --> 00:12:44,760
+very much so yeah really really leans
+
+190
+00:12:44,760 --> 00:12:46,120
+into the uh the length that you're going
+
+191
+00:12:46,120 --> 00:12:48,360
+to be dealing with and a lot of the
+
+192
+00:12:48,360 --> 00:12:49,680
+examples that we have and you can look
+
+193
+00:12:49,680 --> 00:12:51,519
+in the documentation for kind of what
+
+194
+00:12:51,519 --> 00:12:53,199
+we're dealing with for how long it's
+
+195
+00:12:53,199 --> 00:12:55,360
+going to take to read through a book or
+
+196
+00:12:55,360 --> 00:12:57,880
+read through a sonnet or an or a haiku
+
+197
+00:12:57,880 --> 00:13:00,000
+so definitely leaning into terminology
+
+198
+00:13:00,000 --> 00:13:02,959
+as we keep evolving our models
+
+199
+00:13:02,959 --> 00:13:05,040
+absolutely so what can you do with Claud
+
+200
+00:13:05,040 --> 00:13:06,120
+what can you do with many different
+
+201
+00:13:06,120 --> 00:13:07,920
+things in the Gen AI ecosystem
+
+202
+00:13:07,920 --> 00:13:10,000
+specifically with Claude 3.5 Sonet there
+
+203
+00:13:10,000 --> 00:13:12,160
+are a lot of really powerful examples
+
+204
+00:13:12,160 --> 00:13:13,800
+and in our documentation we are
+
+205
+00:13:13,800 --> 00:13:16,320
+constantly updating with use case guides
+
+206
+00:13:16,320 --> 00:13:19,279
+as well as more technical notebooks for
+
+207
+00:13:19,279 --> 00:13:21,040
+text generation content moderation
+
+208
+00:13:21,040 --> 00:13:23,680
+coding relating tasks classification we
+
+209
+00:13:23,680 --> 00:13:25,279
+just launch a couple new use case guides
+
+210
+00:13:25,279 --> 00:13:26,920
+especially in the classification and
+
+211
+00:13:26,920 --> 00:13:28,800
+ticket routing side of things and we'll
+
+212
+00:13:28,800 --> 00:13:31,240
+keep doing more and more of that but as
+
+213
+00:13:31,240 --> 00:13:33,040
+there's more and more rapid innovation
+
+214
+00:13:33,040 --> 00:13:35,000
+in this space there's just more and more
+
+215
+00:13:35,000 --> 00:13:36,360
+that you can do with these models which
+
+216
+00:13:36,360 --> 00:13:40,199
+is incredibly exciting to us as a
+
+217
+00:13:40,199 --> 00:13:41,959
+company some of the things that you may
+
+218
+00:13:41,959 --> 00:13:43,600
+have been kind of diving into and Khloe
+
+219
+00:13:43,600 --> 00:13:44,920
+mentioned this a little bit with the
+
+220
+00:13:44,920 --> 00:13:47,519
+agentic capabilities some of the models
+
+221
+00:13:47,519 --> 00:13:50,040
+especially Opus as well as 3.5 Sonet
+
+222
+00:13:50,040 --> 00:13:52,560
+have increased agentic capabilities and
+
+223
+00:13:52,560 --> 00:13:54,199
+just to give you a quick overview of the
+
+224
+00:13:54,199 --> 00:13:56,800
+idea of an agent this is where we can
+
+225
+00:13:56,800 --> 00:13:59,399
+assign some kind of task to a model have
+
+226
+00:13:59,399 --> 00:14:01,639
+the model perform the necessary steps
+
+227
+00:14:01,639 --> 00:14:04,240
+make the necessary function calls or API
+
+228
+00:14:04,240 --> 00:14:06,519
+calls or routing to figure out the right
+
+229
+00:14:06,519 --> 00:14:09,360
+Next Step all programmatically and all
+
+230
+00:14:09,360 --> 00:14:11,680
+done through generative AI so as these
+
+231
+00:14:11,680 --> 00:14:14,800
+models continue to get more intelligent
+
+232
+00:14:14,800 --> 00:14:17,199
+more efficient this is only a pattern
+
+233
+00:14:17,199 --> 00:14:18,399
+that we're going to just keep following
+
+234
+00:14:18,399 --> 00:14:20,240
+more and more and more of and there are
+
+235
+00:14:20,240 --> 00:14:21,680
+many different infrastructures for
+
+236
+00:14:21,680 --> 00:14:23,199
+creating agents these can be done
+
+237
+00:14:23,199 --> 00:14:25,160
+programmatically on your own so many
+
+238
+00:14:25,160 --> 00:14:27,160
+different ways to kind of offer these
+
+239
+00:14:27,160 --> 00:14:28,800
+agentic capabilities which is something
+
+240
+00:14:28,800 --> 00:14:30,720
+that just seeing more and more of in
+
+241
+00:14:30,720 --> 00:14:31,839
+this
+
+242
+00:14:31,839 --> 00:14:34,160
+space with that said I want to shift
+
+243
+00:14:34,160 --> 00:14:35,320
+gears a little bit and I want to talk
+
+244
+00:14:35,320 --> 00:14:37,680
+about something that feels relatively
+
+245
+00:14:37,680 --> 00:14:39,920
+basic and in fact it's not the most
+
+246
+00:14:39,920 --> 00:14:41,959
+complex thing but it's really a matter
+
+247
+00:14:41,959 --> 00:14:43,360
+of figuring out the right Tech
+
+248
+00:14:43,360 --> 00:14:45,360
+techniques and best practices a lot of
+
+249
+00:14:45,360 --> 00:14:47,079
+times when you hear prompt engineering
+
+250
+00:14:47,079 --> 00:14:48,480
+you might go towards the engineering
+
+251
+00:14:48,480 --> 00:14:50,680
+side of things and I want to lean more
+
+252
+00:14:50,680 --> 00:14:52,399
+towards just techniques and best
+
+253
+00:14:52,399 --> 00:14:55,199
+practices for getting the right thing or
+
+254
+00:14:55,199 --> 00:14:57,320
+getting the thing you want out of the
+
+255
+00:14:57,320 --> 00:14:59,519
+model A lot of these tactics are going
+
+256
+00:14:59,519 --> 00:15:01,880
+to be a bit specific to Claude but if
+
+257
+00:15:01,880 --> 00:15:03,279
+you are working with other large
+
+258
+00:15:03,279 --> 00:15:04,759
+language models a lot of these
+
+259
+00:15:04,759 --> 00:15:06,600
+techniques still apply so there might be
+
+260
+00:15:06,600 --> 00:15:08,680
+things that you've heard of a bit before
+
+261
+00:15:08,680 --> 00:15:09,839
+and there might be things that hopefully
+
+262
+00:15:09,839 --> 00:15:11,120
+you're going to learn about as we talk
+
+263
+00:15:11,120 --> 00:15:13,680
+about prompting Claud so at a very high
+
+264
+00:15:13,680 --> 00:15:15,000
+overview I'm sure many of you know this
+
+265
+00:15:15,000 --> 00:15:15,920
+but let's make sure we got our
+
+266
+00:15:15,920 --> 00:15:17,920
+terminology down what is a prompt it's
+
+267
+00:15:17,920 --> 00:15:20,880
+the information you pass to an llm large
+
+268
+00:15:20,880 --> 00:15:24,199
+language model to get back a response
+
+269
+00:15:24,199 --> 00:15:27,560
+and what you pass inside of this prompt
+
+270
+00:15:27,560 --> 00:15:30,319
+determines the response that you get not
+
+271
+00:15:30,319 --> 00:15:32,240
+just the question that you're asking but
+
+272
+00:15:32,240 --> 00:15:34,920
+also some context about that question
+
+273
+00:15:34,920 --> 00:15:36,720
+maybe some data some examples some
+
+274
+00:15:36,720 --> 00:15:39,279
+instructions there's so much that goes
+
+275
+00:15:39,279 --> 00:15:42,319
+into a prompt so how do you engineer a
+
+276
+00:15:42,319 --> 00:15:44,199
+good prompt the same way that you would
+
+277
+00:15:44,199 --> 00:15:45,959
+really think about engineering good code
+
+278
+00:15:45,959 --> 00:15:47,720
+and with that you think about your
+
+279
+00:15:47,720 --> 00:15:49,600
+testing first you think about your edge
+
+280
+00:15:49,600 --> 00:15:52,199
+cases first so very commonly when we
+
+281
+00:15:52,199 --> 00:15:54,240
+have companies that are working with us
+
+282
+00:15:54,240 --> 00:15:56,040
+and using our models we really do our
+
+283
+00:15:56,040 --> 00:15:59,120
+absolute best to move from instead of an
+
+284
+00:15:59,120 --> 00:16:01,680
+form treat this like a science develop
+
+285
+00:16:01,680 --> 00:16:03,800
+test cases don't forget about your edge
+
+286
+00:16:03,800 --> 00:16:05,800
+cases and think about when there is a
+
+287
+00:16:05,800 --> 00:16:08,240
+prompt what is the ideal output or the
+
+288
+00:16:08,240 --> 00:16:11,399
+golden output as we say you can start by
+
+289
+00:16:11,399 --> 00:16:13,720
+engineering some preliminary prompt you
+
+290
+00:16:13,720 --> 00:16:15,880
+can test it against use cases and then
+
+291
+00:16:15,880 --> 00:16:18,160
+you can refine The Prompt this part of
+
+292
+00:16:18,160 --> 00:16:21,279
+the prompt engineering life cycle is by
+
+293
+00:16:21,279 --> 00:16:24,040
+far the most important because if you go
+
+294
+00:16:24,040 --> 00:16:25,880
+ahead and switch to a different model if
+
+295
+00:16:25,880 --> 00:16:28,000
+you go ahead and even use an entirely
+
+296
+00:16:28,000 --> 00:16:29,440
+different large language model or a
+
+297
+00:16:29,440 --> 00:16:31,600
+different version of an existing model
+
+298
+00:16:31,600 --> 00:16:33,240
+how do you know if the prompts that you
+
+299
+00:16:33,240 --> 00:16:35,480
+have in production potentially are going
+
+300
+00:16:35,480 --> 00:16:37,759
+to do any better or any worse and that's
+
+301
+00:16:37,759 --> 00:16:40,040
+where the entire process of evals or
+
+302
+00:16:40,040 --> 00:16:42,199
+evaluations comes into play we'll talk
+
+303
+00:16:42,199 --> 00:16:43,600
+about those at a high level but
+
+304
+00:16:43,600 --> 00:16:44,959
+hopefully you'll get to invite me back
+
+305
+00:16:44,959 --> 00:16:47,600
+and I can talk about evals in
+
+306
+00:16:47,600 --> 00:16:50,000
+depth so think of your evals as really
+
+307
+00:16:50,000 --> 00:16:51,920
+just a a unit test if I put in this
+
+308
+00:16:51,920 --> 00:16:53,720
+prompt and I asked this prompt some
+
+309
+00:16:53,720 --> 00:16:56,120
+specific piece of information do I get
+
+310
+00:16:56,120 --> 00:16:58,600
+the answer back that I expect and as I
+
+311
+00:16:58,600 --> 00:17:00,880
+do at over hundreds or thousands of test
+
+312
+00:17:00,880 --> 00:17:03,120
+prompts am I getting consistent results
+
+313
+00:17:03,120 --> 00:17:05,439
+what percentage of accuracy am I getting
+
+314
+00:17:05,439 --> 00:17:07,559
+I can also measure things like latency
+
+315
+00:17:07,559 --> 00:17:09,760
+or the speed can also be mindful of how
+
+316
+00:17:09,760 --> 00:17:11,480
+many tokens are being used from a cost
+
+317
+00:17:11,480 --> 00:17:13,319
+perspective so you can really do a lot
+
+318
+00:17:13,319 --> 00:17:16,199
+of engineering here to make sure that
+
+319
+00:17:16,199 --> 00:17:18,319
+the prompts that you produce hold out
+
+320
+00:17:18,319 --> 00:17:20,199
+against your evals and are ready to get
+
+321
+00:17:20,199 --> 00:17:22,520
+into production and we're not looking
+
+322
+00:17:22,520 --> 00:17:25,919
+for exact uh matches each time I imagine
+
+323
+00:17:25,919 --> 00:17:27,959
+because I know when I'm prompting AI
+
+324
+00:17:27,959 --> 00:17:30,039
+sometimes look at a slightly slightly
+
+325
+00:17:30,039 --> 00:17:31,679
+different but same answer but not the
+
+326
+00:17:31,679 --> 00:17:33,120
+same wording we're just trying to see if
+
+327
+00:17:33,120 --> 00:17:34,880
+we're getting the outcome we write want
+
+328
+00:17:34,880 --> 00:17:36,480
+right absolutely so it's a it's an
+
+329
+00:17:36,480 --> 00:17:38,080
+excellent question because it really as
+
+330
+00:17:38,080 --> 00:17:40,000
+with many things in gen it depends on
+
+331
+00:17:40,000 --> 00:17:42,280
+your use case so in the in the in this
+
+332
+00:17:42,280 --> 00:17:43,880
+essence of something like text
+
+333
+00:17:43,880 --> 00:17:46,160
+summarization it would be really really
+
+334
+00:17:46,160 --> 00:17:48,039
+really hard to say it must look the
+
+335
+00:17:48,039 --> 00:17:50,400
+summary must look exactly like this
+
+336
+00:17:50,400 --> 00:17:51,840
+that's where you need to use either
+
+337
+00:17:51,840 --> 00:17:53,320
+large language models to help you with
+
+338
+00:17:53,320 --> 00:17:55,320
+your eval or potential string matching
+
+339
+00:17:55,320 --> 00:17:56,840
+or patterns for just looking for
+
+340
+00:17:56,840 --> 00:17:58,840
+particular things if it's a case of
+
+341
+00:17:58,840 --> 00:18:01,039
+maybe classification where the answer is
+
+342
+00:18:01,039 --> 00:18:03,280
+either something from a category or some
+
+343
+00:18:03,280 --> 00:18:04,679
+specific data structure that you know
+
+344
+00:18:04,679 --> 00:18:06,200
+what it's going to look like you might
+
+345
+00:18:06,200 --> 00:18:07,880
+have a chance to do a bit more of that
+
+346
+00:18:07,880 --> 00:18:10,799
+exact matching but your spoton with not
+
+347
+00:18:10,799 --> 00:18:12,320
+every single use case is always going to
+
+348
+00:18:12,320 --> 00:18:15,039
+be a perfect match sometimes it's
+
+349
+00:18:15,039 --> 00:18:16,840
+something similar and that's where you
+
+350
+00:18:16,840 --> 00:18:18,440
+have to iterate and it all depends on
+
+351
+00:18:18,440 --> 00:18:20,280
+your use case that's an excellent point
+
+352
+00:18:20,280 --> 00:18:22,039
+as a developer relations engineer that
+
+353
+00:18:22,039 --> 00:18:23,960
+is always fun when it comes uh when it
+
+354
+00:18:23,960 --> 00:18:25,960
+comes to making documentation I think
+
+355
+00:18:25,960 --> 00:18:28,480
+we're so used to saying this output will
+
+356
+00:18:28,480 --> 00:18:30,760
+happen but since AI is learning all the
+
+357
+00:18:30,760 --> 00:18:32,600
+time it's been an interesting thing to
+
+358
+00:18:32,600 --> 00:18:34,679
+adjust to just like you said prompting
+
+359
+00:18:34,679 --> 00:18:38,200
+is deceptively uh it's not as simple as
+
+360
+00:18:38,200 --> 00:18:41,039
+I think people paint it out to be
+
+361
+00:18:41,039 --> 00:18:42,720
+absolutely yeah and I'm I'm excited to
+
+362
+00:18:42,720 --> 00:18:44,159
+show you actually as we get into some of
+
+363
+00:18:44,159 --> 00:18:45,960
+those tools to to make this a little bit
+
+364
+00:18:45,960 --> 00:18:48,520
+easier to work with because many times
+
+365
+00:18:48,520 --> 00:18:50,000
+you might read some documentation you
+
+366
+00:18:50,000 --> 00:18:51,720
+might read some guides on prompting and
+
+367
+00:18:51,720 --> 00:18:53,679
+best practices and they might actually
+
+368
+00:18:53,679 --> 00:18:55,440
+point you towards something that feels a
+
+369
+00:18:55,440 --> 00:18:58,159
+bit like this you want to put in your
+
+370
+00:18:58,159 --> 00:19:00,159
+prompt the context for your task you
+
+371
+00:19:00,159 --> 00:19:01,400
+want to put in the tone you want to
+
+372
+00:19:01,400 --> 00:19:03,400
+think about background data and examples
+
+373
+00:19:03,400 --> 00:19:05,000
+and a history and thinking step by step
+
+374
+00:19:05,000 --> 00:19:06,240
+and don't forget to make sure that your
+
+375
+00:19:06,240 --> 00:19:08,039
+model knows how to think and think about
+
+376
+00:19:08,039 --> 00:19:10,480
+pre-filling and it's going to get really
+
+377
+00:19:10,480 --> 00:19:11,600
+really hard to keep that all in your
+
+378
+00:19:11,600 --> 00:19:13,799
+brain or memorize some kind of acronym
+
+379
+00:19:13,799 --> 00:19:14,960
+for all the things that you need or
+
+380
+00:19:14,960 --> 00:19:16,320
+think about all the colors that we have
+
+381
+00:19:16,320 --> 00:19:18,400
+here so the way that we think about
+
+382
+00:19:18,400 --> 00:19:20,200
+prompt engineering at anthropic
+
+383
+00:19:20,200 --> 00:19:22,360
+especially for our customers is don't
+
+384
+00:19:22,360 --> 00:19:24,640
+start from scratch we already have lots
+
+385
+00:19:24,640 --> 00:19:26,159
+of good practices we already have lots
+
+386
+00:19:26,159 --> 00:19:28,080
+of good ideas for how best to work with
+
+387
+00:19:28,080 --> 00:19:31,039
+these models so instead let's actually
+
+388
+00:19:31,039 --> 00:19:33,919
+start in reverse and we've introduced a
+
+389
+00:19:33,919 --> 00:19:35,120
+tool here and I'm going to show you in a
+
+390
+00:19:35,120 --> 00:19:37,360
+second called The Meta prompter and what
+
+391
+00:19:37,360 --> 00:19:40,520
+we actually have here is you as the user
+
+392
+00:19:40,520 --> 00:19:43,159
+put in the thing you're trying to do we
+
+393
+00:19:43,159 --> 00:19:46,120
+then will use Claude to write a prompt
+
+394
+00:19:46,120 --> 00:19:49,200
+for you with all the best practices that
+
+395
+00:19:49,200 --> 00:19:51,600
+allows you to then work off of that
+
+396
+00:19:51,600 --> 00:19:53,600
+prompt and have something that you can
+
+397
+00:19:53,600 --> 00:19:55,480
+build off of because it's very difficult
+
+398
+00:19:55,480 --> 00:19:57,320
+to just start engineering with a prompt
+
+399
+00:19:57,320 --> 00:19:58,720
+from scratch especially if you're even
+
+400
+00:19:58,720 --> 00:20:00,240
+coming from a different language model
+
+401
+00:20:00,240 --> 00:20:01,400
+and you're trying to adopt different
+
+402
+00:20:01,400 --> 00:20:03,280
+practices so let's see what that looks
+
+403
+00:20:03,280 --> 00:20:06,159
+like G to hop over using AI to help with
+
+404
+00:20:06,159 --> 00:20:08,919
+our AI prompting yes hence the term meta
+
+405
+00:20:08,919 --> 00:20:12,000
+prompting exactly that is that is so I
+
+406
+00:20:12,000 --> 00:20:13,679
+am at the anthropic console that's
+
+407
+00:20:13,679 --> 00:20:15,720
+console. anthropic tocom and I'm going
+
+408
+00:20:15,720 --> 00:20:17,760
+to go to the prompt generator or meta
+
+409
+00:20:17,760 --> 00:20:19,400
+prompter whatever word you want to use
+
+410
+00:20:19,400 --> 00:20:22,120
+there I'm going to use AI to use AI just
+
+411
+00:20:22,120 --> 00:20:24,200
+like you said Chloe so you can put in
+
+412
+00:20:24,200 --> 00:20:25,520
+the particular task that you want at
+
+413
+00:20:25,520 --> 00:20:27,039
+hand I'm just going to pick one of these
+
+414
+00:20:27,039 --> 00:20:29,080
+just to show you as an example I'm going
+
+415
+00:20:29,080 --> 00:20:31,080
+to draft an email responding to a
+
+416
+00:20:31,080 --> 00:20:32,520
+customer complaint and offer a
+
+417
+00:20:32,520 --> 00:20:34,880
+resolution let's imagine for some reason
+
+418
+00:20:34,880 --> 00:20:36,200
+you're very upset with what happens in
+
+419
+00:20:36,200 --> 00:20:38,280
+this hour and we need Claude to help us
+
+420
+00:20:38,280 --> 00:20:40,159
+out and offer some resolution but
+
+421
+00:20:40,159 --> 00:20:42,000
+hopefully that is not the case so we'll
+
+422
+00:20:42,000 --> 00:20:43,440
+give this a second to kind of work its
+
+423
+00:20:43,440 --> 00:20:45,919
+magic but what you're going to see here
+
+424
+00:20:45,919 --> 00:20:48,919
+is a whole bunch of text this is being
+
+425
+00:20:48,919 --> 00:20:51,480
+generated from Claude and this right
+
+426
+00:20:51,480 --> 00:20:54,200
+here is a great place for us to start
+
+427
+00:20:54,200 --> 00:20:55,720
+working
+
+428
+00:20:55,720 --> 00:20:58,760
+from once we continue we can you can
+
+429
+00:20:58,760 --> 00:21:00,080
+actually go ahead
+
+430
+00:21:00,080 --> 00:21:02,799
+and stay here and we're going to be
+
+431
+00:21:02,799 --> 00:21:06,280
+taken to our workbench this is all
+
+432
+00:21:06,280 --> 00:21:08,520
+inside of the console and this allows us
+
+433
+00:21:08,520 --> 00:21:10,720
+to work with the prompt maybe your task
+
+434
+00:21:10,720 --> 00:21:12,320
+with drafting a professional empathetic
+
+435
+00:21:12,320 --> 00:21:13,360
+so maybe I don't necessarily want
+
+436
+00:21:13,360 --> 00:21:15,919
+empathetic I want a strongly worded I
+
+437
+00:21:15,919 --> 00:21:17,440
+can go ahead and change this as much as
+
+438
+00:21:17,440 --> 00:21:19,200
+I want what I've gotten out of the box
+
+439
+00:21:19,200 --> 00:21:21,919
+is just the meta prompter not only can I
+
+440
+00:21:21,919 --> 00:21:23,440
+start working with this I can go ahead
+
+441
+00:21:23,440 --> 00:21:25,240
+and just grab the code for that so let's
+
+442
+00:21:25,240 --> 00:21:28,000
+go ahead and use the vertex AI SDK to do
+
+443
+00:21:28,000 --> 00:21:30,320
+so and I've got that right here to work
+
+444
+00:21:30,320 --> 00:21:32,720
+with so a lot of times the the code
+
+445
+00:21:32,720 --> 00:21:34,960
+necessary to talk to the llm is not
+
+446
+00:21:34,960 --> 00:21:36,919
+terribly complex but just getting that
+
+447
+00:21:36,919 --> 00:21:38,880
+boiler plate is really nice can hop to
+
+448
+00:21:38,880 --> 00:21:40,600
+the docs I can copy that code throw it
+
+449
+00:21:40,600 --> 00:21:43,000
+in a notebook throw it in a script go on
+
+450
+00:21:43,000 --> 00:21:45,520
+with my day in this case we're given
+
+451
+00:21:45,520 --> 00:21:47,679
+some variables so in our prompt we are
+
+452
+00:21:47,679 --> 00:21:50,039
+given some for example here's what that
+
+453
+00:21:50,039 --> 00:21:51,279
+complaint might look like here's what
+
+454
+00:21:51,279 --> 00:21:52,559
+the company name might look like here
+
+455
+00:21:52,559 --> 00:21:56,159
+are the resolution options if I am just
+
+456
+00:21:56,159 --> 00:21:58,760
+needing to generate some simple data for
+
+457
+00:21:58,760 --> 00:22:01,120
+this prompt it's kind of hard for me
+
+458
+00:22:01,120 --> 00:22:02,440
+even to just think of examples from
+
+459
+00:22:02,440 --> 00:22:05,600
+scratch so again let's just use
+
+460
+00:22:05,600 --> 00:22:08,240
+generative AI to help us out walk me
+
+461
+00:22:08,240 --> 00:22:09,520
+through the logic that you're thinking
+
+462
+00:22:09,520 --> 00:22:11,919
+about for generating these example
+
+463
+00:22:11,919 --> 00:22:14,120
+inputs just so that I can have something
+
+464
+00:22:14,120 --> 00:22:16,600
+to work with so instead of me trying to
+
+465
+00:22:16,600 --> 00:22:19,320
+write an example of a complaint email
+
+466
+00:22:19,320 --> 00:22:22,360
+I'm just going to use gen to do
+
+467
+00:22:22,360 --> 00:22:24,400
+that it's now going to fill in the
+
+468
+00:22:24,400 --> 00:22:27,080
+blanks here I can actually see the logic
+
+469
+00:22:27,080 --> 00:22:29,400
+that it's using under the hook could for
+
+470
+00:22:29,400 --> 00:22:31,840
+generating these examples so the goal
+
+471
+00:22:31,840 --> 00:22:34,080
+here is to start with something build
+
+472
+00:22:34,080 --> 00:22:36,360
+for yourself a workbench where you can
+
+473
+00:22:36,360 --> 00:22:37,679
+actually start putting in some dummy
+
+474
+00:22:37,679 --> 00:22:41,000
+data and seeing what you get back in
+
+475
+00:22:41,000 --> 00:22:42,320
+this response we're going to see an
+
+476
+00:22:42,320 --> 00:22:44,720
+example of this email and here is where
+
+477
+00:22:44,720 --> 00:22:47,240
+we can take this data and we can
+
+478
+00:22:47,240 --> 00:22:49,360
+evaluate it against something so in this
+
+479
+00:22:49,360 --> 00:22:51,279
+case we're not necessarily going to find
+
+480
+00:22:51,279 --> 00:22:53,760
+the perfect response here but maybe we
+
+481
+00:22:53,760 --> 00:22:55,000
+want to make sure that we're seeing
+
+482
+00:22:55,000 --> 00:22:57,039
+things with reply to this email we want
+
+483
+00:22:57,039 --> 00:22:57,919
+to make sure we're seeing the word
+
+484
+00:22:57,919 --> 00:22:59,760
+refund credit card and check we want to
+
+485
+00:22:59,760 --> 00:23:01,480
+make sure that we mention two to three
+
+486
+00:23:01,480 --> 00:23:03,640
+business days that could be part of our
+
+487
+00:23:03,640 --> 00:23:05,600
+evaluation Suite talking about
+
+488
+00:23:05,600 --> 00:23:07,679
+evaluation Suites we can go ahead and
+
+489
+00:23:07,679 --> 00:23:10,159
+hop to this section here on evaluate and
+
+490
+00:23:10,159 --> 00:23:11,720
+you can see right here here are the
+
+491
+00:23:11,720 --> 00:23:13,919
+variables here is the prompt and I can
+
+492
+00:23:13,919 --> 00:23:16,919
+now go ahead and assign a grade to these
+
+493
+00:23:16,919 --> 00:23:19,640
+evals I can export these I can import
+
+494
+00:23:19,640 --> 00:23:21,960
+test cases I can even just generate a
+
+495
+00:23:21,960 --> 00:23:24,440
+bunch of test cases so for example pick
+
+496
+00:23:24,440 --> 00:23:25,799
+some new things tell me what the
+
+497
+00:23:25,799 --> 00:23:27,559
+response is let's go ahead and see what
+
+498
+00:23:27,559 --> 00:23:29,120
+you get
+
+499
+00:23:29,120 --> 00:23:31,240
+you can move this to a different place
+
+500
+00:23:31,240 --> 00:23:33,000
+programmatically you can move this in a
+
+501
+00:23:33,000 --> 00:23:35,559
+CSV this idea of just building
+
+502
+00:23:35,559 --> 00:23:37,720
+infrastructure so that you can prompt
+
+503
+00:23:37,720 --> 00:23:40,640
+the right way is incredibly valuable and
+
+504
+00:23:40,640 --> 00:23:42,320
+it just helps you not have to do things
+
+505
+00:23:42,320 --> 00:23:44,120
+from scratch the hardest part with
+
+506
+00:23:44,120 --> 00:23:45,880
+prompt engineering is you start with
+
+507
+00:23:45,880 --> 00:23:46,880
+something you build on it you build on
+
+508
+00:23:46,880 --> 00:23:48,120
+it you build on it you kind of have this
+
+509
+00:23:48,120 --> 00:23:49,960
+house of cards and then it's not doing
+
+510
+00:23:49,960 --> 00:23:51,440
+what you want it to do and you don't
+
+511
+00:23:51,440 --> 00:23:53,720
+necessarily know why so really helpful
+
+512
+00:23:53,720 --> 00:23:55,600
+to kind of think about the testing first
+
+513
+00:23:55,600 --> 00:23:57,840
+think about the evaluations first can't
+
+514
+00:23:57,840 --> 00:24:00,440
+stress that
+
+515
+00:24:00,919 --> 00:24:02,919
+enough if you feel good about what you
+
+516
+00:24:02,919 --> 00:24:04,600
+have you're excellent but here's an
+
+517
+00:24:04,600 --> 00:24:07,720
+opportunity to now compare that to a
+
+518
+00:24:07,720 --> 00:24:10,200
+different prompt that you have and this
+
+519
+00:24:10,200 --> 00:24:12,400
+now gives you the ability to run given
+
+520
+00:24:12,400 --> 00:24:15,520
+these variables different prompts to get
+
+521
+00:24:15,520 --> 00:24:17,360
+different responses and see which one
+
+522
+00:24:17,360 --> 00:24:19,039
+works better this is something that even
+
+523
+00:24:19,039 --> 00:24:20,720
+if you are not necessarily technical
+
+524
+00:24:20,720 --> 00:24:22,039
+that's not a problem you don't need to
+
+525
+00:24:22,039 --> 00:24:23,640
+know any python to make this work you
+
+526
+00:24:23,640 --> 00:24:25,279
+just need to log in and start working
+
+527
+00:24:25,279 --> 00:24:27,000
+with it so you have a lot of
+
+528
+00:24:27,000 --> 00:24:28,960
+functionality within this workbench you
+
+529
+00:24:28,960 --> 00:24:30,320
+also have the ability to tweak many
+
+530
+00:24:30,320 --> 00:24:31,960
+different things so I'll kind of leave
+
+531
+00:24:31,960 --> 00:24:33,720
+that to you to explore some more this is
+
+532
+00:24:33,720 --> 00:24:35,480
+a really powerful tool for just getting
+
+533
+00:24:35,480 --> 00:24:38,480
+up and running and testing your prompts
+
+534
+00:24:38,480 --> 00:24:40,760
+and I love that it's all in one place
+
+535
+00:24:40,760 --> 00:24:43,000
+I'm not having to contact switch or or
+
+536
+00:24:43,000 --> 00:24:44,360
+click around that I can just have
+
+537
+00:24:44,360 --> 00:24:46,960
+everything in one spot play around a
+
+538
+00:24:46,960 --> 00:24:50,200
+little bit compare side by side I have
+
+539
+00:24:50,200 --> 00:24:51,559
+to say when you showed that rainbow
+
+540
+00:24:51,559 --> 00:24:53,760
+visual I got very excited as a visual
+
+541
+00:24:53,760 --> 00:24:56,640
+person if only there was a way to
+
+542
+00:24:56,640 --> 00:24:59,120
+automate this really really it's a
+
+543
+00:24:59,120 --> 00:25:00,520
+really really pretty pretty slide which
+
+544
+00:25:00,520 --> 00:25:01,840
+is why we show it first and then we show
+
+545
+00:25:01,840 --> 00:25:03,720
+you the meta prompter but yes it is
+
+546
+00:25:03,720 --> 00:25:05,200
+definitely it's got lots of colors and
+
+547
+00:25:05,200 --> 00:25:07,080
+it's super pretty but with that comes
+
+548
+00:25:07,080 --> 00:25:08,600
+the the complexity that you just
+
+549
+00:25:08,600 --> 00:25:10,480
+mentioned so you could def I was
+
+550
+00:25:10,480 --> 00:25:15,840
+thinking Roy G Biv anthropic yeah
+
+551
+00:25:15,840 --> 00:25:19,159
+exactly that is that is spot on so
+
+552
+00:25:19,159 --> 00:25:20,960
+thankfully we have an easier tool to do
+
+553
+00:25:20,960 --> 00:25:22,799
+that and that is our our meta prompter
+
+554
+00:25:22,799 --> 00:25:25,520
+so the idea here again we capture the
+
+555
+00:25:25,520 --> 00:25:27,200
+best practices we're constantly
+
+556
+00:25:27,200 --> 00:25:29,080
+iterating on this as we figure out more
+
+557
+00:25:29,080 --> 00:25:30,480
+and more of the best practices one of
+
+558
+00:25:30,480 --> 00:25:32,840
+the things that is just a constant era
+
+559
+00:25:32,840 --> 00:25:35,320
+of or place of Discovery is figuring out
+
+560
+00:25:35,320 --> 00:25:37,240
+the best ways to prompt these llms
+
+561
+00:25:37,240 --> 00:25:39,000
+something that is just changing as newer
+
+562
+00:25:39,000 --> 00:25:40,279
+models are released as different
+
+563
+00:25:40,279 --> 00:25:41,760
+research techniques are released
+
+564
+00:25:41,760 --> 00:25:42,880
+different prompting techniques are
+
+565
+00:25:42,880 --> 00:25:44,840
+released so being able to kind of stay
+
+566
+00:25:44,840 --> 00:25:46,440
+on top of that without you having to
+
+567
+00:25:46,440 --> 00:25:47,960
+keep that all in your head can be
+
+568
+00:25:47,960 --> 00:25:49,360
+extremely extremely
+
+569
+00:25:49,360 --> 00:25:51,640
+helpful so with that said you're going
+
+570
+00:25:51,640 --> 00:25:53,559
+to get a prompt generated for you let's
+
+571
+00:25:53,559 --> 00:25:54,840
+just talk about some of the important
+
+572
+00:25:54,840 --> 00:25:56,720
+parts of that
+
+573
+00:25:56,720 --> 00:25:59,440
+prompt when you are prompting you want
+
+574
+00:25:59,440 --> 00:26:01,399
+to make sure you have some kind of role
+
+575
+00:26:01,399 --> 00:26:03,480
+and highlevel task for what you would
+
+576
+00:26:03,480 --> 00:26:06,200
+like the llm to do many times people
+
+577
+00:26:06,200 --> 00:26:08,399
+kind of take this to an extreme like you
+
+578
+00:26:08,399 --> 00:26:09,919
+are the smartest mathematician in the
+
+579
+00:26:09,919 --> 00:26:11,840
+world you have 15 phds from the most
+
+580
+00:26:11,840 --> 00:26:13,919
+respected institutions in the world you
+
+581
+00:26:13,919 --> 00:26:16,120
+can solve any math problem there's only
+
+582
+00:26:16,120 --> 00:26:17,960
+so much hyping up of Claude that you can
+
+583
+00:26:17,960 --> 00:26:20,520
+do so instead clear and concise and just
+
+584
+00:26:20,520 --> 00:26:22,559
+stick to the role and the task that you
+
+585
+00:26:22,559 --> 00:26:25,919
+have at hand right after that you want
+
+586
+00:26:25,919 --> 00:26:27,799
+to put in your Dynamic content you want
+
+587
+00:26:27,799 --> 00:26:30,080
+to put in in any external data that you
+
+588
+00:26:30,080 --> 00:26:32,559
+are retrieving that's where that goes
+
+589
+00:26:32,559 --> 00:26:34,200
+right there so right under that that's
+
+590
+00:26:34,200 --> 00:26:35,760
+where the dynamic content in our case
+
+591
+00:26:35,760 --> 00:26:37,919
+these variables or if you're using rag
+
+592
+00:26:37,919 --> 00:26:38,880
+which we'll talk about a little bit
+
+593
+00:26:38,880 --> 00:26:41,120
+later embed that right
+
+594
+00:26:41,120 --> 00:26:42,960
+here the next step you want to be
+
+595
+00:26:42,960 --> 00:26:46,360
+mindful of is detailed instructions and
+
+596
+00:26:46,360 --> 00:26:48,039
+many times you might hear things like
+
+597
+00:26:48,039 --> 00:26:50,600
+this idea of Chain of Thought or make
+
+598
+00:26:50,600 --> 00:26:52,279
+sure that you tell your large language
+
+599
+00:26:52,279 --> 00:26:55,000
+model to think step by step and just
+
+600
+00:26:55,000 --> 00:26:57,080
+those words think step by step can be
+
+601
+00:26:57,080 --> 00:26:59,000
+very beneficial but I really want to
+
+602
+00:26:59,000 --> 00:27:00,679
+push you all to just do a little bit
+
+603
+00:27:00,679 --> 00:27:02,559
+more instead of just saying think step
+
+604
+00:27:02,559 --> 00:27:05,200
+by step what are the actual steps what
+
+605
+00:27:05,200 --> 00:27:07,080
+is the thinking that you want or what is
+
+606
+00:27:07,080 --> 00:27:09,399
+the thinking that you want to see from
+
+607
+00:27:09,399 --> 00:27:11,679
+Claud so that you can then get a sense
+
+608
+00:27:11,679 --> 00:27:13,799
+of in the prompt maybe what you need to
+
+609
+00:27:13,799 --> 00:27:16,320
+shift to steer CLA in the direction of
+
+610
+00:27:16,320 --> 00:27:18,440
+the thinking that you might want so
+
+611
+00:27:18,440 --> 00:27:20,159
+you'll see when you generate those meta
+
+612
+00:27:20,159 --> 00:27:21,600
+prompts or even when writing prompts on
+
+613
+00:27:21,600 --> 00:27:23,679
+your own thinking step byep can be
+
+614
+00:27:23,679 --> 00:27:25,480
+extremely helpful but you really want to
+
+615
+00:27:25,480 --> 00:27:28,360
+lean more into that piece
+
+616
+00:27:28,360 --> 00:27:29,640
+step that you want to get to you'll see
+
+617
+00:27:29,640 --> 00:27:31,520
+this idea with endot prompting three
+
+618
+00:27:31,520 --> 00:27:34,159
+shot five shot 10 shot sounds like a Dr
+
+619
+00:27:34,159 --> 00:27:36,399
+Seuss book but this is endot prompting
+
+620
+00:27:36,399 --> 00:27:38,799
+or the number of examples that you want
+
+621
+00:27:38,799 --> 00:27:41,480
+to provide examples can be extremely
+
+622
+00:27:41,480 --> 00:27:43,600
+extremely helpful especially when you
+
+623
+00:27:43,600 --> 00:27:45,880
+want things to follow an exact path or
+
+624
+00:27:45,880 --> 00:27:48,360
+kind of rigid output or structure there
+
+625
+00:27:48,360 --> 00:27:51,000
+is no one magical answer for the exact
+
+626
+00:27:51,000 --> 00:27:53,760
+number of examples that you need but to
+
+627
+00:27:53,760 --> 00:27:55,799
+start 3 to five is a great
+
+628
+00:27:55,799 --> 00:27:58,880
+place if there are critical instru
+
+629
+00:27:58,880 --> 00:28:00,720
+put them at the end and repeat them and
+
+630
+00:28:00,720 --> 00:28:02,200
+that can be extremely extremely helpful
+
+631
+00:28:02,200 --> 00:28:05,039
+for just staying on
+
+632
+00:28:05,039 --> 00:28:06,840
+task another piece that you're going to
+
+633
+00:28:06,840 --> 00:28:09,880
+see a lot in Claude prompts are XML tags
+
+634
+00:28:09,880 --> 00:28:12,080
+for those of you not familiar with XML
+
+635
+00:28:12,080 --> 00:28:13,840
+you might be familiar with HTML these
+
+636
+00:28:13,840 --> 00:28:15,960
+are just tags that you use to build web
+
+637
+00:28:15,960 --> 00:28:19,000
+pages and XML tags follow a very similar
+
+638
+00:28:19,000 --> 00:28:21,279
+structure you just pick the name of the
+
+639
+00:28:21,279 --> 00:28:24,840
+tags so instead of H1 div body span you
+
+640
+00:28:24,840 --> 00:28:27,519
+get to make them up the purpose of these
+
+641
+00:28:27,519 --> 00:28:30,320
+XML tags tags is to help Claude
+
+642
+00:28:30,320 --> 00:28:34,440
+comprehend the organization of your data
+
+643
+00:28:34,440 --> 00:28:36,840
+Claude is trained on XML tags it's also
+
+644
+00:28:36,840 --> 00:28:38,159
+trained on a tremendous amount of things
+
+645
+00:28:38,159 --> 00:28:40,960
+on the internet and HTML so it has the
+
+646
+00:28:40,960 --> 00:28:43,600
+ability to figure out in terms of where
+
+647
+00:28:43,600 --> 00:28:46,720
+you want to put your data XML tags are a
+
+648
+00:28:46,720 --> 00:28:48,559
+very very helpful way to do that they're
+
+649
+00:28:48,559 --> 00:28:50,559
+not necessarily required but it's a
+
+650
+00:28:50,559 --> 00:28:52,159
+really wise idea especially as you have
+
+651
+00:28:52,159 --> 00:28:54,519
+much larger prompts to help Cloud
+
+652
+00:28:54,519 --> 00:28:56,519
+organize its thinking for knowing what
+
+653
+00:28:56,519 --> 00:28:59,840
+goes where
+
+654
+00:29:00,240 --> 00:29:02,399
+as we mentioned with these examples you
+
+655
+00:29:02,399 --> 00:29:04,519
+really want to lean into the relevance
+
+656
+00:29:04,519 --> 00:29:06,200
+of your examples obviously you want an
+
+657
+00:29:06,200 --> 00:29:07,600
+example that's going to indicate what
+
+658
+00:29:07,600 --> 00:29:09,200
+you're looking for but you also want to
+
+659
+00:29:09,200 --> 00:29:10,720
+think a lot about the diversity of
+
+660
+00:29:10,720 --> 00:29:12,440
+examples so if you're just providing the
+
+661
+00:29:12,440 --> 00:29:13,919
+same example over and over again but
+
+662
+00:29:13,919 --> 00:29:15,960
+You' change one or two things that might
+
+663
+00:29:15,960 --> 00:29:17,760
+not be the most helpful so think a lot
+
+664
+00:29:17,760 --> 00:29:19,640
+especially with potential edge cases
+
+665
+00:29:19,640 --> 00:29:22,519
+without the diversity of your examples
+
+666
+00:29:22,519 --> 00:29:24,600
+many times instead of just giving
+
+667
+00:29:24,600 --> 00:29:26,600
+examples in a lot of depth it can be
+
+668
+00:29:26,600 --> 00:29:29,000
+helpful to just show CL what you are
+
+669
+00:29:29,000 --> 00:29:31,320
+trying to get out so instead of trying
+
+670
+00:29:31,320 --> 00:29:33,200
+to describe your example with all this
+
+671
+00:29:33,200 --> 00:29:35,519
+text sometimes it's as simple as here's
+
+672
+00:29:35,519 --> 00:29:36,960
+the input I want here's the output I
+
+673
+00:29:36,960 --> 00:29:38,360
+want here's the question I want here's
+
+674
+00:29:38,360 --> 00:29:41,200
+the answer I want so this is also where
+
+675
+00:29:41,200 --> 00:29:42,480
+being a little bit more on the shorter
+
+676
+00:29:42,480 --> 00:29:45,320
+and concise part can be very beneficial
+
+677
+00:29:45,320 --> 00:29:46,559
+one of the things that we see a lot of
+
+678
+00:29:46,559 --> 00:29:48,559
+times with prompts when we are debugging
+
+679
+00:29:48,559 --> 00:29:50,159
+or triaging prompts and we'll talk about
+
+680
+00:29:50,159 --> 00:29:52,480
+that a little bit are just these massive
+
+681
+00:29:52,480 --> 00:29:55,279
+prompts that have so much text that you
+
+682
+00:29:55,279 --> 00:29:57,000
+would look at and just say I have no
+
+683
+00:29:57,000 --> 00:29:58,640
+idea what to do with this thing
+
+684
+00:29:58,640 --> 00:30:00,000
+and that's actually where the golden
+
+685
+00:30:00,000 --> 00:30:02,320
+rule of prompting came to be the golden
+
+686
+00:30:02,320 --> 00:30:03,880
+rule of prompting is again this is going
+
+687
+00:30:03,880 --> 00:30:05,480
+to sound very simple but you'd be
+
+688
+00:30:05,480 --> 00:30:07,440
+shocked can you take the prompt that
+
+689
+00:30:07,440 --> 00:30:09,559
+you've written can you hand it to the
+
+690
+00:30:09,559 --> 00:30:10,760
+person next to you in front of you
+
+691
+00:30:10,760 --> 00:30:13,200
+behind you above you and can they just
+
+692
+00:30:13,200 --> 00:30:15,039
+understand what you're trying to do
+
+693
+00:30:15,039 --> 00:30:16,600
+sometimes debugging a prompt is really
+
+694
+00:30:16,600 --> 00:30:19,159
+as simple as can you just do that part
+
+695
+00:30:19,159 --> 00:30:21,279
+because a lot of prompts get really
+
+696
+00:30:21,279 --> 00:30:22,840
+unwieldy you might have tons of
+
+697
+00:30:22,840 --> 00:30:24,399
+conditional logic or all sorts of fancy
+
+698
+00:30:24,399 --> 00:30:25,960
+things you're trying to do a lot of
+
+699
+00:30:25,960 --> 00:30:27,720
+times those don't really move the needle
+
+700
+00:30:27,720 --> 00:30:30,200
+the sometimes even hurt
+
+701
+00:30:30,200 --> 00:30:32,440
+you another piece that you might have
+
+702
+00:30:32,440 --> 00:30:34,000
+seen before and you can see this with a
+
+703
+00:30:34,000 --> 00:30:35,519
+lot of different large language models
+
+704
+00:30:35,519 --> 00:30:37,519
+is you can start to put words in
+
+705
+00:30:37,519 --> 00:30:40,000
+claude's mouth this can be very helpful
+
+706
+00:30:40,000 --> 00:30:42,399
+for steering the behavior having control
+
+707
+00:30:42,399 --> 00:30:45,320
+over the format but what you can do is
+
+708
+00:30:45,320 --> 00:30:47,039
+in the assistant field the way that
+
+709
+00:30:47,039 --> 00:30:49,519
+Claude works is you have a user who puts
+
+710
+00:30:49,519 --> 00:30:51,200
+in some content and then the assistant
+
+711
+00:30:51,200 --> 00:30:52,880
+is what Claude gives you back you can
+
+712
+00:30:52,880 --> 00:30:55,039
+actually start by pre-filling claud's
+
+713
+00:30:55,039 --> 00:30:57,519
+response you can give it the start of
+
+714
+00:30:57,519 --> 00:30:59,279
+the J output that you want you can give
+
+715
+00:30:59,279 --> 00:31:00,880
+it the start of the XML tag you're
+
+716
+00:31:00,880 --> 00:31:02,720
+looking for you can give it the start of
+
+717
+00:31:02,720 --> 00:31:05,000
+some Preamble so that Claud kind of
+
+718
+00:31:05,000 --> 00:31:07,240
+picks up where you left off so depending
+
+719
+00:31:07,240 --> 00:31:09,039
+on your use case you can really be
+
+720
+00:31:09,039 --> 00:31:10,799
+mindful of if I'm not getting things
+
+721
+00:31:10,799 --> 00:31:12,960
+that I want in a particular Lane can you
+
+722
+00:31:12,960 --> 00:31:14,880
+start to give CLA kind of a A little
+
+723
+00:31:14,880 --> 00:31:16,600
+nudge for here's where I want you to
+
+724
+00:31:16,600 --> 00:31:19,760
+begin you take over from here it's
+
+725
+00:31:19,760 --> 00:31:21,880
+almost like doing a group project with
+
+726
+00:31:21,880 --> 00:31:25,960
+with CLA I did the first C here's the
+
+727
+00:31:25,960 --> 00:31:28,360
+rest and the good news is actually have
+
+728
+00:31:28,360 --> 00:31:29,720
+to work that hard on the group project
+
+729
+00:31:29,720 --> 00:31:31,320
+and you can still get get an excellent
+
+730
+00:31:31,320 --> 00:31:32,840
+grade so you can be that that person in
+
+731
+00:31:32,840 --> 00:31:35,159
+the was in
+
+732
+00:31:35,159 --> 00:31:38,000
+school when you think about things like
+
+733
+00:31:38,000 --> 00:31:41,000
+rag Dynamic data like we mentioned you
+
+734
+00:31:41,000 --> 00:31:44,840
+want to put that long information at the
+
+735
+00:31:44,840 --> 00:31:47,279
+top after you specify your role and this
+
+736
+00:31:47,279 --> 00:31:49,000
+actually does make a difference in the
+
+737
+00:31:49,000 --> 00:31:50,639
+quality of your prompts and the outputs
+
+738
+00:31:50,639 --> 00:31:52,159
+that you get so this is one of those
+
+739
+00:31:52,159 --> 00:31:54,519
+places where order can be very important
+
+740
+00:31:54,519 --> 00:31:56,399
+again if you don't remember it that's
+
+741
+00:31:56,399 --> 00:31:57,919
+all good that's what the meta prompter
+
+742
+00:31:57,919 --> 00:31:59,840
+is there
+
+743
+00:31:59,840 --> 00:32:02,919
+for when you're working with long
+
+744
+00:32:02,919 --> 00:32:04,600
+context when you have a lot of
+
+745
+00:32:04,600 --> 00:32:06,440
+information a lot of text inside of one
+
+746
+00:32:06,440 --> 00:32:08,000
+prompt or you're retrieving lots of
+
+747
+00:32:08,000 --> 00:32:09,679
+examples and you just have a ton a ton a
+
+748
+00:32:09,679 --> 00:32:13,360
+ton of text to minimize hallucinations
+
+749
+00:32:13,360 --> 00:32:15,880
+to minimize the llm saying something
+
+750
+00:32:15,880 --> 00:32:18,279
+that may be incorrect or even saying I
+
+751
+00:32:18,279 --> 00:32:20,960
+don't know you can ask Claude to find
+
+752
+00:32:20,960 --> 00:32:23,240
+relevant quotes before answering you can
+
+753
+00:32:23,240 --> 00:32:25,320
+also ask Claude to share those quotes
+
+754
+00:32:25,320 --> 00:32:27,120
+with you so that you have citations you
+
+755
+00:32:27,120 --> 00:32:28,840
+can stay a little bit more grounded in
+
+756
+00:32:28,840 --> 00:32:31,399
+the truth you can also have Claud read
+
+757
+00:32:31,399 --> 00:32:33,159
+the document carefully because it will
+
+758
+00:32:33,159 --> 00:32:35,200
+be asked questions later and you might
+
+759
+00:32:35,200 --> 00:32:36,799
+look at this and say well it's not like
+
+760
+00:32:36,799 --> 00:32:38,679
+Claude is GNA take 10 more seconds to
+
+761
+00:32:38,679 --> 00:32:40,799
+read the document because I said so but
+
+762
+00:32:40,799 --> 00:32:42,600
+again little things like this can really
+
+763
+00:32:42,600 --> 00:32:43,480
+move the
+
+764
+00:32:43,480 --> 00:32:45,840
+needle and does that help with
+
+765
+00:32:45,840 --> 00:32:47,960
+efficiency like being able to to get to
+
+766
+00:32:47,960 --> 00:32:50,399
+the answer faster or maybe you know
+
+767
+00:32:50,399 --> 00:32:52,919
+doing more of a a breath verus versus a
+
+768
+00:32:52,919 --> 00:32:55,840
+depth search in this instance or why are
+
+769
+00:32:55,840 --> 00:32:57,000
+definitely more of the more of the
+
+770
+00:32:57,000 --> 00:32:58,679
+breath there we're really just trying to
+
+771
+00:32:58,679 --> 00:33:01,120
+stay grounded in accuracy so we're
+
+772
+00:33:01,120 --> 00:33:02,519
+really just trying to do everything we
+
+773
+00:33:02,519 --> 00:33:04,600
+can to preempt the model to give us the
+
+774
+00:33:04,600 --> 00:33:07,080
+most accurate response and that's kind
+
+775
+00:33:07,080 --> 00:33:08,679
+of worthy sometimes Thinking by thinking
+
+776
+00:33:08,679 --> 00:33:10,360
+step by step can produce better quality
+
+777
+00:33:10,360 --> 00:33:12,120
+answers saying things like read the
+
+778
+00:33:12,120 --> 00:33:13,320
+document carefully because I'm going to
+
+779
+00:33:13,320 --> 00:33:15,720
+ask you questions about it can produce
+
+780
+00:33:15,720 --> 00:33:18,279
+answers that are either grounded or
+
+781
+00:33:18,279 --> 00:33:20,279
+prompts clawed to say things like I
+
+782
+00:33:20,279 --> 00:33:22,440
+don't know which can be equally as
+
+783
+00:33:22,440 --> 00:33:24,679
+valuable because the you know nothing
+
+784
+00:33:24,679 --> 00:33:26,200
+nothing is worse than your model saying
+
+785
+00:33:26,200 --> 00:33:27,880
+something that is just clearly not true
+
+786
+00:33:27,880 --> 00:33:29,840
+because every model gives every answer
+
+787
+00:33:29,840 --> 00:33:31,200
+with the utmost confidence we don't
+
+788
+00:33:31,200 --> 00:33:32,919
+really have a kind of confidence meter
+
+789
+00:33:32,919 --> 00:33:34,880
+out of the box that uh that we can get
+
+790
+00:33:34,880 --> 00:33:37,320
+so this is where just focusing on that
+
+791
+00:33:37,320 --> 00:33:40,000
+kind of breath I would say so that you
+
+792
+00:33:40,000 --> 00:33:41,399
+make sure that it's going to give you
+
+793
+00:33:41,399 --> 00:33:43,000
+the most grounded answer is H is where
+
+794
+00:33:43,000 --> 00:33:44,799
+we're getting to it's like telling
+
+795
+00:33:44,799 --> 00:33:47,480
+Claude there will be a test well there
+
+796
+00:33:47,480 --> 00:33:48,519
+there you go exactly the same way that
+
+797
+00:33:48,519 --> 00:33:49,600
+if you're in a classroom and the teacher
+
+798
+00:33:49,600 --> 00:33:50,840
+says there's gonna be a quiz at the end
+
+799
+00:33:50,840 --> 00:33:52,679
+of this you're probably more likely to
+
+800
+00:33:52,679 --> 00:33:54,799
+listen to what the teacher has to say so
+
+801
+00:33:54,799 --> 00:33:55,880
+that's that's my bad I should have said
+
+802
+00:33:55,880 --> 00:33:57,279
+there was going to be a quiz before I
+
+803
+00:33:57,279 --> 00:33:58,679
+started
+
+804
+00:33:58,679 --> 00:34:00,200
+some best practices as you start working
+
+805
+00:34:00,200 --> 00:34:02,399
+with large language models provide as
+
+806
+00:34:02,399 --> 00:34:05,200
+much situational context as possible so
+
+807
+00:34:05,200 --> 00:34:07,120
+when we talk about that kind of role
+
+808
+00:34:07,120 --> 00:34:09,119
+that you're talking about instead of
+
+809
+00:34:09,119 --> 00:34:11,280
+just asking Claude for something try to
+
+810
+00:34:11,280 --> 00:34:14,119
+give Claude some context for who you are
+
+811
+00:34:14,119 --> 00:34:16,119
+what information's useful what you need
+
+812
+00:34:16,119 --> 00:34:17,879
+or if this is for a customer any
+
+813
+00:34:17,879 --> 00:34:21,440
+customer specific context for example a
+
+814
+00:34:21,440 --> 00:34:23,040
+decent prompt might just say something
+
+815
+00:34:23,040 --> 00:34:24,720
+like explain to me in brief how rag
+
+816
+00:34:24,720 --> 00:34:26,480
+works and you'll probably get a pretty
+
+817
+00:34:26,480 --> 00:34:29,000
+decent answer but but depending on the
+
+818
+00:34:29,000 --> 00:34:31,720
+kind of answer that you want granted yes
+
+819
+00:34:31,720 --> 00:34:33,480
+this does take a little bit more text to
+
+820
+00:34:33,480 --> 00:34:35,240
+put in and again The Meta prompter can
+
+821
+00:34:35,240 --> 00:34:37,280
+be very helpful but really kind of
+
+822
+00:34:37,280 --> 00:34:39,960
+setting the stage for what you want the
+
+823
+00:34:39,960 --> 00:34:42,399
+output to be this can save you a lot of
+
+824
+00:34:42,399 --> 00:34:44,560
+back and forth with the llm because many
+
+825
+00:34:44,560 --> 00:34:45,960
+times you might just say something like
+
+826
+00:34:45,960 --> 00:34:48,000
+explain rag to me okay that was good but
+
+827
+00:34:48,000 --> 00:34:49,200
+I'm an account executive and I'm
+
+828
+00:34:49,200 --> 00:34:51,200
+preparing for a meeting try it again oh
+
+829
+00:34:51,200 --> 00:34:52,639
+actually the clients in the financial
+
+830
+00:34:52,639 --> 00:34:55,040
+sector so try it again um actually make
+
+831
+00:34:55,040 --> 00:34:57,280
+your answer pretty convincing this is
+
+832
+00:34:57,280 --> 00:34:59,040
+where just providing that situational
+
+833
+00:34:59,040 --> 00:35:00,599
+context thinking a little bit more
+
+834
+00:35:00,599 --> 00:35:03,000
+before you jump to get an answer out can
+
+835
+00:35:03,000 --> 00:35:05,640
+be really really
+
+836
+00:35:06,079 --> 00:35:08,000
+helpful as we talk a little bit about
+
+837
+00:35:08,000 --> 00:35:10,480
+those thinking instructions remember
+
+838
+00:35:10,480 --> 00:35:12,079
+telling Claude to think step by step
+
+839
+00:35:12,079 --> 00:35:14,040
+telling your model to think step by step
+
+840
+00:35:14,040 --> 00:35:15,880
+can be beneficial and has been shown to
+
+841
+00:35:15,880 --> 00:35:18,520
+be beneficial in very interesting papers
+
+842
+00:35:18,520 --> 00:35:20,480
+but as we kind of go to the next step
+
+843
+00:35:20,480 --> 00:35:23,119
+around that we want to think a lot about
+
+844
+00:35:23,119 --> 00:35:27,720
+not just tell Cloud to think but how
+
+845
+00:35:27,720 --> 00:35:30,359
+should Claude think what are any details
+
+846
+00:35:30,359 --> 00:35:32,119
+what are any steps what is the thinking
+
+847
+00:35:32,119 --> 00:35:34,400
+process you want Claude to take the same
+
+848
+00:35:34,400 --> 00:35:35,720
+way that if you're trying to teach
+
+849
+00:35:35,720 --> 00:35:37,240
+something to someone you might just not
+
+850
+00:35:37,240 --> 00:35:39,000
+tell them go solve the problem you might
+
+851
+00:35:39,000 --> 00:35:40,839
+say something like show your work or go
+
+852
+00:35:40,839 --> 00:35:42,359
+through it step by step here are the
+
+853
+00:35:42,359 --> 00:35:45,320
+steps that I want you to take so for
+
+854
+00:35:45,320 --> 00:35:46,560
+example how can we make this a little
+
+855
+00:35:46,560 --> 00:35:47,760
+bit better with some thought
+
+856
+00:35:47,760 --> 00:35:49,640
+instructions we're getting to the role
+
+857
+00:35:49,640 --> 00:35:51,440
+we're talking about who we are and then
+
+858
+00:35:51,440 --> 00:35:53,599
+we're doing a pretty nice job for hey I
+
+859
+00:35:53,599 --> 00:35:55,480
+have a general understanding of AI but
+
+860
+00:35:55,480 --> 00:35:57,119
+no technical background so you don't
+
+861
+00:35:57,119 --> 00:35:58,720
+need to explain rag to me as if I don't
+
+862
+00:35:58,720 --> 00:36:01,160
+know anything about AI I need to be able
+
+863
+00:36:01,160 --> 00:36:03,040
+to explain this to an audience that's
+
+864
+00:36:03,040 --> 00:36:05,119
+non-technical while addressing concerns
+
+865
+00:36:05,119 --> 00:36:08,000
+for technical folks so how can we make
+
+866
+00:36:08,000 --> 00:36:10,720
+this better with some thought
+
+867
+00:36:10,720 --> 00:36:12,480
+instructions let's go ahead and take a
+
+868
+00:36:12,480 --> 00:36:14,720
+look at one example here granted you
+
+869
+00:36:14,720 --> 00:36:16,160
+look at this and it's a oh man there's
+
+870
+00:36:16,160 --> 00:36:18,720
+just like a lot of text I need to write
+
+871
+00:36:18,720 --> 00:36:20,359
+sometimes yeah Again The Meta prompter
+
+872
+00:36:20,359 --> 00:36:22,319
+can be very helpful for that but when
+
+873
+00:36:22,319 --> 00:36:24,000
+you are going through prompts yourself
+
+874
+00:36:24,000 --> 00:36:25,640
+can be really useful to kind of dive
+
+875
+00:36:25,640 --> 00:36:27,720
+into what's happening here so bring
+
+876
+00:36:27,720 --> 00:36:29,040
+storm the information that would be most
+
+877
+00:36:29,040 --> 00:36:30,720
+important and then be sure to account
+
+878
+00:36:30,720 --> 00:36:32,640
+for these things and then brainstorm
+
+879
+00:36:32,640 --> 00:36:34,880
+what information I can highlight the
+
+880
+00:36:34,880 --> 00:36:36,680
+reason why this is also very beneficial
+
+881
+00:36:36,680 --> 00:36:38,880
+is because you can ask Claude to Output
+
+882
+00:36:38,880 --> 00:36:40,839
+its thought in thinking tags in a
+
+883
+00:36:40,839 --> 00:36:42,319
+scratchpad tag whatever you want to
+
+884
+00:36:42,319 --> 00:36:44,280
+choose for your tag and you will
+
+885
+00:36:44,280 --> 00:36:46,440
+actually see what Claude is thinking as
+
+886
+00:36:46,440 --> 00:36:48,280
+it gets you an answer and that can be
+
+887
+00:36:48,280 --> 00:36:49,640
+really beneficial when you go back and
+
+888
+00:36:49,640 --> 00:36:51,359
+say oh turns out you're actually
+
+889
+00:36:51,359 --> 00:36:52,760
+thinking about this in a different way
+
+890
+00:36:52,760 --> 00:36:54,200
+I'd like you to go ahead and change the
+
+891
+00:36:54,200 --> 00:36:55,760
+way that you're thinking and that's
+
+892
+00:36:55,760 --> 00:36:59,520
+going to produce a really optimal output
+
+893
+00:37:01,760 --> 00:37:03,480
+so we've got some really good practices
+
+894
+00:37:03,480 --> 00:37:05,800
+for building prompts however many times
+
+895
+00:37:05,800 --> 00:37:07,599
+in the real world you are either given a
+
+896
+00:37:07,599 --> 00:37:09,280
+prompt or you are working on some
+
+897
+00:37:09,280 --> 00:37:10,920
+existing prompt and it's not doing what
+
+898
+00:37:10,920 --> 00:37:12,640
+you want it to do so I want to shift
+
+899
+00:37:12,640 --> 00:37:15,240
+gears a little bit to triaging prompts
+
+900
+00:37:15,240 --> 00:37:17,839
+triaging prompts meaning you have a
+
+901
+00:37:17,839 --> 00:37:19,720
+prompt something's not working what do
+
+902
+00:37:19,720 --> 00:37:22,160
+you do what info do you need so whether
+
+903
+00:37:22,160 --> 00:37:23,560
+that's a customer or someone on your
+
+904
+00:37:23,560 --> 00:37:25,040
+team is just saying the customer is
+
+905
+00:37:25,040 --> 00:37:26,280
+reporting that the prompt is not doing
+
+906
+00:37:26,280 --> 00:37:28,280
+what we want it to do what info do you
+
+907
+00:37:28,280 --> 00:37:30,880
+need first and foremost you want to have
+
+908
+00:37:30,880 --> 00:37:32,680
+the use case and the prompt so you want
+
+909
+00:37:32,680 --> 00:37:34,200
+to make sure it's very hard to debug
+
+910
+00:37:34,200 --> 00:37:35,720
+prompts when you don't actually have the
+
+911
+00:37:35,720 --> 00:37:37,200
+prompt so if you're just saying hey
+
+912
+00:37:37,200 --> 00:37:38,839
+we're getting an output of true when it
+
+913
+00:37:38,839 --> 00:37:40,440
+should be false you want to make sure
+
+914
+00:37:40,440 --> 00:37:42,480
+you know what's going on here so when
+
+915
+00:37:42,480 --> 00:37:45,160
+there is a problem make sure you analyze
+
+916
+00:37:45,160 --> 00:37:48,599
+the full use case and the prompt some
+
+917
+00:37:48,599 --> 00:37:50,960
+examples and potentially the problematic
+
+918
+00:37:50,960 --> 00:37:53,359
+output and the ideal in output again
+
+919
+00:37:53,359 --> 00:37:54,560
+this is where having evals or
+
+920
+00:37:54,560 --> 00:37:56,800
+evaluations can be really really helpful
+
+921
+00:37:56,800 --> 00:37:58,000
+so I'm going to talk through this little
+
+922
+00:37:58,000 --> 00:37:59,000
+piece and then I'm actually going to
+
+923
+00:37:59,000 --> 00:38:01,200
+show you a course that we have that is
+
+924
+00:38:01,200 --> 00:38:04,079
+on our courses GitHub that uses vertex
+
+925
+00:38:04,079 --> 00:38:06,040
+where you can practice yourself for how
+
+926
+00:38:06,040 --> 00:38:07,920
+to tweak those props so we're going to
+
+927
+00:38:07,920 --> 00:38:09,520
+step through these triaging processes
+
+928
+00:38:09,520 --> 00:38:10,800
+and then I'm going to give you a brief
+
+929
+00:38:10,800 --> 00:38:12,720
+introduction to our course talk about
+
+930
+00:38:12,720 --> 00:38:15,720
+Rag and we'll have some time for
+
+931
+00:38:15,720 --> 00:38:19,000
+Q&A first thing again I know it's uh
+
+932
+00:38:19,000 --> 00:38:20,280
+sometimes seems a bit silly but you'd be
+
+933
+00:38:20,280 --> 00:38:21,480
+surprised how many people try to just
+
+934
+00:38:21,480 --> 00:38:23,560
+jump to brainstorming things just read
+
+935
+00:38:23,560 --> 00:38:25,720
+the prompt does it follow that Golden
+
+936
+00:38:25,720 --> 00:38:27,760
+Rule can you explain it to the person
+
+937
+00:38:27,760 --> 00:38:30,079
+next to you do you actually understand
+
+938
+00:38:30,079 --> 00:38:32,440
+the issue and then think about what
+
+939
+00:38:32,440 --> 00:38:34,079
+Solutions you might have and if there
+
+940
+00:38:34,079 --> 00:38:35,800
+are other things you need to think about
+
+941
+00:38:35,800 --> 00:38:37,440
+get to it but really try to be
+
+942
+00:38:37,440 --> 00:38:39,920
+scientific in this process does the
+
+943
+00:38:39,920 --> 00:38:42,920
+prompt make sense again this Golden Rule
+
+944
+00:38:42,920 --> 00:38:45,560
+here can I give it to someone else if I
+
+945
+00:38:45,560 --> 00:38:47,040
+receive this prompt as instructions
+
+946
+00:38:47,040 --> 00:38:49,800
+could I do the task successfully a lot
+
+947
+00:38:49,800 --> 00:38:51,480
+of this is really just
+
+948
+00:38:51,480 --> 00:38:53,319
+organization sometimes you might look at
+
+949
+00:38:53,319 --> 00:38:54,640
+this and say wow you have examples at
+
+950
+00:38:54,640 --> 00:38:55,720
+the top then you have examples at the
+
+951
+00:38:55,720 --> 00:38:56,839
+bottom then you have instructions in the
+
+952
+00:38:56,839 --> 00:38:58,280
+middle and you have instructions at the
+
+953
+00:38:58,280 --> 00:38:59,480
+bottom that seem to contradict the
+
+954
+00:38:59,480 --> 00:39:01,880
+instructions in the middle when these
+
+955
+00:39:01,880 --> 00:39:03,280
+prompts get bigger and bigger and bigger
+
+956
+00:39:03,280 --> 00:39:04,680
+as you try to just handle more and more
+
+957
+00:39:04,680 --> 00:39:06,640
+and more many cases these are actually
+
+958
+00:39:06,640 --> 00:39:09,079
+the problems that you run
+
+959
+00:39:09,079 --> 00:39:11,160
+into again make sure you understand the
+
+960
+00:39:11,160 --> 00:39:13,200
+issue identify the possible cause is
+
+961
+00:39:13,200 --> 00:39:15,160
+Claud trying to be too helpful is Claud
+
+962
+00:39:15,160 --> 00:39:17,040
+not helpful enough are there no explicit
+
+963
+00:39:17,040 --> 00:39:18,359
+instructions on how to ground its
+
+964
+00:39:18,359 --> 00:39:20,280
+response in the truth this is really the
+
+965
+00:39:20,280 --> 00:39:22,040
+number one thing for minimizing
+
+966
+00:39:22,040 --> 00:39:24,319
+hallucinations you have to ask Claud to
+
+967
+00:39:24,319 --> 00:39:25,920
+check its work you have to ask Claud to
+
+968
+00:39:25,920 --> 00:39:27,880
+provide citations you have to ask CLA
+
+969
+00:39:27,880 --> 00:39:29,280
+sometimes if you really don't know say I
+
+970
+00:39:29,280 --> 00:39:33,680
+don't know if there is a low accuracy
+
+971
+00:39:33,680 --> 00:39:35,079
+here are some really good questions to
+
+972
+00:39:35,079 --> 00:39:37,880
+dive into and many times it's it's
+
+973
+00:39:37,880 --> 00:39:39,480
+really as simple as these first couple
+
+974
+00:39:39,480 --> 00:39:41,960
+things is your prompt just way too big
+
+975
+00:39:41,960 --> 00:39:43,160
+are there way too many complicated
+
+976
+00:39:43,160 --> 00:39:45,000
+instructions could a human look at this
+
+977
+00:39:45,000 --> 00:39:46,520
+and just say I have no idea where to
+
+978
+00:39:46,520 --> 00:39:48,960
+even start is there a lack of Specific
+
+979
+00:39:48,960 --> 00:39:51,000
+Instructions many times many different
+
+980
+00:39:51,000 --> 00:39:52,359
+people work on the same prompt and they
+
+981
+00:39:52,359 --> 00:39:53,359
+find that that they're actually
+
+982
+00:39:53,359 --> 00:39:54,640
+repeating themselves with slightly
+
+983
+00:39:54,640 --> 00:39:56,599
+different wording and that just reduces
+
+984
+00:39:56,599 --> 00:39:57,720
+the accuracy because you're trying to
+
+985
+00:39:57,720 --> 00:40:00,040
+just have Claude do too much so a lot of
+
+986
+00:40:00,040 --> 00:40:02,440
+times it's really just reading
+
+987
+00:40:02,440 --> 00:40:04,359
+dissecting thinking about those best
+
+988
+00:40:04,359 --> 00:40:06,640
+practices even taking the task running
+
+989
+00:40:06,640 --> 00:40:07,640
+through the meta prompter and just
+
+990
+00:40:07,640 --> 00:40:09,480
+comparing side by side what's the meta
+
+991
+00:40:09,480 --> 00:40:10,640
+prompter giving me what does my
+
+992
+00:40:10,640 --> 00:40:13,720
+structure look like where can I begin
+
+993
+00:40:13,720 --> 00:40:16,200
+there is Claude mistaking a harmless
+
+994
+00:40:16,200 --> 00:40:18,359
+task as harmful like I mentioned we
+
+995
+00:40:18,359 --> 00:40:20,160
+spend a lot of time and a lot of thought
+
+996
+00:40:20,160 --> 00:40:22,920
+into refusals into making sure that
+
+997
+00:40:22,920 --> 00:40:25,280
+things that are not appropriate are not
+
+998
+00:40:25,280 --> 00:40:28,359
+being used in any way in our ecosystem
+
+999
+00:40:28,359 --> 00:40:29,960
+that does open the opportunity for a
+
+1000
+00:40:29,960 --> 00:40:32,400
+potential harmless task as harmful are
+
+1001
+00:40:32,400 --> 00:40:34,000
+there ways that we can be mindful to
+
+1002
+00:40:34,000 --> 00:40:37,359
+steer CLA in prefilling the response or
+
+1003
+00:40:37,359 --> 00:40:39,920
+in the text of the prompt for making
+
+1004
+00:40:39,920 --> 00:40:41,880
+sure that we're getting things that may
+
+1005
+00:40:41,880 --> 00:40:43,839
+actually be totally harmless to not have
+
+1006
+00:40:43,839 --> 00:40:45,280
+Claud kind of come in and think that
+
+1007
+00:40:45,280 --> 00:40:46,359
+it's
+
+1008
+00:40:46,359 --> 00:40:49,480
+harmful do we have enough examples does
+
+1009
+00:40:49,480 --> 00:40:51,119
+the prompt have a clear structure so
+
+1010
+00:40:51,119 --> 00:40:53,160
+many times really just these relatively
+
+1011
+00:40:53,160 --> 00:40:54,720
+simple things that cause a lot of
+
+1012
+00:40:54,720 --> 00:40:56,040
+problems a lot of
+
+1013
+00:40:56,040 --> 00:40:58,240
+headache if Claude is trying to be
+
+1014
+00:40:58,240 --> 00:41:00,440
+overly helpful tell it had to be helpful
+
+1015
+00:41:00,440 --> 00:41:02,560
+while being accurate tell it had to say
+
+1016
+00:41:02,560 --> 00:41:04,680
+I don't know be short and succinct if
+
+1017
+00:41:04,680 --> 00:41:06,200
+there's no instruction for how to ground
+
+1018
+00:41:06,200 --> 00:41:08,599
+things in the truth just like we saw get
+
+1019
+00:41:08,599 --> 00:41:11,160
+quotes answer based on the quotes show
+
+1020
+00:41:11,160 --> 00:41:13,440
+those quotes site your sources same way
+
+1021
+00:41:13,440 --> 00:41:14,800
+you'd ask someone if they're presenting
+
+1022
+00:41:14,800 --> 00:41:16,119
+something where you getting that
+
+1023
+00:41:16,119 --> 00:41:18,680
+information from site your sources have
+
+1024
+00:41:18,680 --> 00:41:21,960
+Cloud check over its own work as
+
+1025
+00:41:21,960 --> 00:41:24,440
+well what I want to do for one brief
+
+1026
+00:41:24,440 --> 00:41:26,960
+moment is actually take a step back and
+
+1027
+00:41:26,960 --> 00:41:29,560
+think about why the answer you get from
+
+1028
+00:41:29,560 --> 00:41:33,119
+an llm might not actually be what you
+
+1029
+00:41:33,119 --> 00:41:36,280
+expect at the end of the day the way
+
+1030
+00:41:36,280 --> 00:41:39,400
+that these models work is a very kind of
+
+1031
+00:41:39,400 --> 00:41:40,920
+fancy sounding process called autor
+
+1032
+00:41:40,920 --> 00:41:43,000
+regressive generation which is simply
+
+1033
+00:41:43,000 --> 00:41:46,079
+just taking in some input and figuring
+
+1034
+00:41:46,079 --> 00:41:49,119
+out the highest probability for the very
+
+1035
+00:41:49,119 --> 00:41:51,280
+first small piece of
+
+1036
+00:41:51,280 --> 00:41:54,480
+output and then we take the next step
+
+1037
+00:41:54,480 --> 00:41:56,359
+and do the exact same thing and the next
+
+1038
+00:41:56,359 --> 00:41:57,480
+step and do the exact same thing thing
+
+1039
+00:41:57,480 --> 00:41:58,839
+and do the next step and do the exact
+
+1040
+00:41:58,839 --> 00:42:01,240
+same thing and we do that until we
+
+1041
+00:42:01,240 --> 00:42:02,880
+either finish the response or run out of
+
+1042
+00:42:02,880 --> 00:42:05,000
+tokens or someone tells us to stop but
+
+1043
+00:42:05,000 --> 00:42:07,560
+it's simply just this process of seeing
+
+1044
+00:42:07,560 --> 00:42:10,280
+what we've done before and recalculating
+
+1045
+00:42:10,280 --> 00:42:12,760
+over and over again for the next thing
+
+1046
+00:42:12,760 --> 00:42:14,319
+the reason why it's so important to have
+
+1047
+00:42:14,319 --> 00:42:16,359
+this mental model is because when you
+
+1048
+00:42:16,359 --> 00:42:17,920
+get an output when you get a response
+
+1049
+00:42:17,920 --> 00:42:20,680
+from an llm it's not just all coming at
+
+1050
+00:42:20,680 --> 00:42:23,800
+once it is actually step by step figured
+
+1051
+00:42:23,800 --> 00:42:25,119
+out what is the next word what's the
+
+1052
+00:42:25,119 --> 00:42:26,119
+next piece of the word what's the next
+
+1053
+00:42:26,119 --> 00:42:27,280
+piece of the word what's the next piece
+
+1054
+00:42:27,280 --> 00:42:29,920
+of the word so when you are debugging a
+
+1055
+00:42:29,920 --> 00:42:32,240
+particular output try to think for
+
+1056
+00:42:32,240 --> 00:42:34,440
+yourself how did I get to this output
+
+1057
+00:42:34,440 --> 00:42:36,839
+how did I end up with the very last
+
+1058
+00:42:36,839 --> 00:42:38,440
+character the very last token the very
+
+1059
+00:42:38,440 --> 00:42:41,040
+last word even in the particular output
+
+1060
+00:42:41,040 --> 00:42:43,160
+that I had it's because the thing before
+
+1061
+00:42:43,160 --> 00:42:44,839
+it said the most likely thing that
+
+1062
+00:42:44,839 --> 00:42:47,440
+follows is what you're seeing so think
+
+1063
+00:42:47,440 --> 00:42:50,559
+about your outputs from llms as being
+
+1064
+00:42:50,559 --> 00:42:53,280
+generated step by step and there is some
+
+1065
+00:42:53,280 --> 00:42:56,319
+reason why it got to that step so maybe
+
+1066
+00:42:56,319 --> 00:42:57,559
+instead of just looking at the last
+
+1067
+00:42:57,559 --> 00:42:59,280
+thing the model gives you take a look at
+
+1068
+00:42:59,280 --> 00:43:01,280
+the entire output and see maybe where
+
+1069
+00:43:01,280 --> 00:43:03,160
+things went wrong and that's where you
+
+1070
+00:43:03,160 --> 00:43:05,240
+can debug
+
+1071
+00:43:05,240 --> 00:43:07,640
+appropriately many different reasons why
+
+1072
+00:43:07,640 --> 00:43:09,359
+things can get better Cloud doesn't
+
+1073
+00:43:09,359 --> 00:43:10,680
+understand there are not enough examples
+
+1074
+00:43:10,680 --> 00:43:12,480
+The Prompt lost lacks structure and so
+
+1075
+00:43:12,480 --> 00:43:14,880
+on many different issues many different
+
+1076
+00:43:14,880 --> 00:43:17,480
+solutions that you can look into we have
+
+1077
+00:43:17,480 --> 00:43:18,839
+a lot of all this good stuff in the
+
+1078
+00:43:18,839 --> 00:43:20,000
+course that I'm going to share so I'll
+
+1079
+00:43:20,000 --> 00:43:21,880
+go through this relatively quickly like
+
+1080
+00:43:21,880 --> 00:43:23,640
+we mentioned pre-filling responses more
+
+1081
+00:43:23,640 --> 00:43:25,760
+examples are better prlax clear
+
+1082
+00:43:25,760 --> 00:43:29,359
+structure create those set C with XML
+
+1083
+00:43:29,359 --> 00:43:32,400
+TX once you've got some improvements
+
+1084
+00:43:32,400 --> 00:43:33,920
+what do you go and delete what do you go
+
+1085
+00:43:33,920 --> 00:43:35,920
+and rewrite kind of like with code
+
+1086
+00:43:35,920 --> 00:43:37,040
+sometimes it's really nice to just
+
+1087
+00:43:37,040 --> 00:43:38,400
+delete things and it feels really good
+
+1088
+00:43:38,400 --> 00:43:40,240
+when you just have lots of deletions and
+
+1089
+00:43:40,240 --> 00:43:41,640
+things are shorter and more concise and
+
+1090
+00:43:41,640 --> 00:43:44,079
+readable and such treat your prompts the
+
+1091
+00:43:44,079 --> 00:43:45,000
+same
+
+1092
+00:43:45,000 --> 00:43:47,000
+way again you can always check your
+
+1093
+00:43:47,000 --> 00:43:48,720
+improvements in the console you can
+
+1094
+00:43:48,720 --> 00:43:51,240
+always compare the results using that
+
+1095
+00:43:51,240 --> 00:43:53,160
+evaluation suite and that workbench that
+
+1096
+00:43:53,160 --> 00:43:55,920
+we have if for some reason you need to
+
+1097
+00:43:55,920 --> 00:43:57,480
+break the prompt into smaller prompts
+
+1098
+00:43:57,480 --> 00:43:59,880
+you need an intent classifier there are
+
+1099
+00:43:59,880 --> 00:44:01,839
+many different Advanced Techniques for
+
+1100
+00:44:01,839 --> 00:44:03,559
+dealing with prompting and that's a
+
+1101
+00:44:03,559 --> 00:44:05,520
+whole other discussion for another time
+
+1102
+00:44:05,520 --> 00:44:07,839
+but most of the time before you jump for
+
+1103
+00:44:07,839 --> 00:44:09,880
+things like fine-tuning before you jump
+
+1104
+00:44:09,880 --> 00:44:12,800
+for intend classifiers or other decision
+
+1105
+00:44:12,800 --> 00:44:15,640
+trees or more advanced patterns a lot of
+
+1106
+00:44:15,640 --> 00:44:17,599
+these steps here are going to solve
+
+1107
+00:44:17,599 --> 00:44:18,839
+problems and this is what we've seen
+
+1108
+00:44:18,839 --> 00:44:20,599
+with so many customers that it's
+
+1109
+00:44:20,599 --> 00:44:22,319
+actually these things that get you in
+
+1110
+00:44:22,319 --> 00:44:23,720
+trouble but these things that are also
+
+1111
+00:44:23,720 --> 00:44:25,839
+relatively easy to fix in the scheme of
+
+1112
+00:44:25,839 --> 00:44:27,800
+things
+
+1113
+00:44:27,800 --> 00:44:29,480
+before we shift to rag I want to just
+
+1114
+00:44:29,480 --> 00:44:31,880
+briefly walk through a course that we
+
+1115
+00:44:31,880 --> 00:44:33,920
+have this is on our courses website and
+
+1116
+00:44:33,920 --> 00:44:35,400
+I'll go ahead and share that link with
+
+1117
+00:44:35,400 --> 00:44:37,200
+you make sure you all have it this is a
+
+1118
+00:44:37,200 --> 00:44:38,800
+real world prompting course that we've
+
+1119
+00:44:38,800 --> 00:44:41,839
+made and it uses vertex exclusively I'm
+
+1120
+00:44:41,839 --> 00:44:43,520
+using the command line to log in but you
+
+1121
+00:44:43,520 --> 00:44:45,359
+can do this really anywhere you can put
+
+1122
+00:44:45,359 --> 00:44:46,839
+this in your own notebook you can open
+
+1123
+00:44:46,839 --> 00:44:48,760
+this in a collab but here's the
+
+1124
+00:44:48,760 --> 00:44:50,880
+interface that I'm using it has five
+
+1125
+00:44:50,880 --> 00:44:52,960
+sections the first part is a prompting
+
+1126
+00:44:52,960 --> 00:44:55,119
+recap so very similar to what we talked
+
+1127
+00:44:55,119 --> 00:44:56,400
+about but if you want to see this kind
+
+1128
+00:44:56,400 --> 00:44:57,960
+of in a notebook format you want to see
+
+1129
+00:44:57,960 --> 00:44:59,160
+a little bit more in the screenshots you
+
+1130
+00:44:59,160 --> 00:45:00,960
+want to see some examples of input text
+
+1131
+00:45:00,960 --> 00:45:02,800
+and generated prompts this is a really
+
+1132
+00:45:02,800 --> 00:45:05,240
+good place to start the second section
+
+1133
+00:45:05,240 --> 00:45:07,319
+that we have is an example with a
+
+1134
+00:45:07,319 --> 00:45:09,559
+medical prompt so we are going to take
+
+1135
+00:45:09,559 --> 00:45:11,400
+some of those ideas that we saw in the
+
+1136
+00:45:11,400 --> 00:45:13,240
+first lesson and we're going to use a
+
+1137
+00:45:13,240 --> 00:45:15,160
+real world prompt this is not customer
+
+1138
+00:45:15,160 --> 00:45:16,559
+data by any means this is all just kind
+
+1139
+00:45:16,559 --> 00:45:18,480
+of madeup stuff and synthetic data that
+
+1140
+00:45:18,480 --> 00:45:20,200
+we have here but we're going to go ahead
+
+1141
+00:45:20,200 --> 00:45:21,680
+and take some patient records and we're
+
+1142
+00:45:21,680 --> 00:45:23,160
+going to generate some summaries from
+
+1143
+00:45:23,160 --> 00:45:25,280
+those records we're going to start with
+
+1144
+00:45:25,280 --> 00:45:27,680
+prompts that are not great again I have
+
+1145
+00:45:27,680 --> 00:45:29,520
+this record can you summarize it for me
+
+1146
+00:45:29,520 --> 00:45:32,640
+I need this quickly again you might just
+
+1147
+00:45:32,640 --> 00:45:34,800
+find yourself writing prompts like this
+
+1148
+00:45:34,800 --> 00:45:36,079
+and you might not get the responses that
+
+1149
+00:45:36,079 --> 00:45:36,920
+you
+
+1150
+00:45:36,920 --> 00:45:39,280
+want to give you a little bit of an idea
+
+1151
+00:45:39,280 --> 00:45:42,160
+of how this works with vertex not a
+
+1152
+00:45:42,160 --> 00:45:43,920
+terrible amount of code necessary even
+
+1153
+00:45:43,920 --> 00:45:46,640
+if you've used other sdks or R SDK it's
+
+1154
+00:45:46,640 --> 00:45:48,760
+very similar you go ahead and just use
+
+1155
+00:45:48,760 --> 00:45:51,119
+this create function that's built on our
+
+1156
+00:45:51,119 --> 00:45:53,359
+client messages object and all that
+
+1157
+00:45:53,359 --> 00:45:55,680
+comes in from anthropic vertex so
+
+1158
+00:45:55,680 --> 00:45:58,680
+initialize the enop iic vertex instance
+
+1159
+00:45:58,680 --> 00:46:00,640
+and then go ahead and using the messages
+
+1160
+00:46:00,640 --> 00:46:03,000
+API create a message start a
+
+1161
+00:46:03,000 --> 00:46:04,720
+conversation with the large language
+
+1162
+00:46:04,720 --> 00:46:06,640
+model just to show you what that looks
+
+1163
+00:46:06,640 --> 00:46:09,280
+like I'm going to go ahead and log in
+
+1164
+00:46:09,280 --> 00:46:10,680
+make sure that I'm authenticated before
+
+1165
+00:46:10,680 --> 00:46:13,079
+I go ahead and do that so I'll hop over
+
+1166
+00:46:13,079 --> 00:46:15,880
+here log in with the Google off library
+
+1167
+00:46:15,880 --> 00:46:17,800
+and Chloe I'm sure there are many many
+
+1168
+00:46:17,800 --> 00:46:19,200
+different ways that folks can do this
+
+1169
+00:46:19,200 --> 00:46:20,599
+this is just the the way that I'm
+
+1170
+00:46:20,599 --> 00:46:22,000
+showing you right now but you can do
+
+1171
+00:46:22,000 --> 00:46:23,400
+this in the model Garden you can do this
+
+1172
+00:46:23,400 --> 00:46:24,760
+with Enterprise notebooks you can do
+
+1173
+00:46:24,760 --> 00:46:27,079
+this in collab and authenticate so many
+
+1174
+00:46:27,079 --> 00:46:29,040
+different ways to uh to tackle this
+
+1175
+00:46:29,040 --> 00:46:30,720
+particular
+
+1176
+00:46:30,720 --> 00:46:33,160
+piece once you're logged in you can go
+
+1177
+00:46:33,160 --> 00:46:36,200
+ahead and start calling CLA and here
+
+1178
+00:46:36,200 --> 00:46:37,160
+I'll go ahead and make sure I actually
+
+1179
+00:46:37,160 --> 00:46:38,800
+have those patient records might yell at
+
+1180
+00:46:38,800 --> 00:46:41,359
+me for not having those yet so we'll go
+
+1181
+00:46:41,359 --> 00:46:42,880
+ahead and generate that summary and
+
+1182
+00:46:42,880 --> 00:46:44,880
+here's a summary that we get back so
+
+1183
+00:46:44,880 --> 00:46:46,680
+this is simply just the conversation
+
+1184
+00:46:46,680 --> 00:46:48,559
+that you can have with the llm here's
+
+1185
+00:46:48,559 --> 00:46:50,480
+the code necessary to get up and running
+
+1186
+00:46:50,480 --> 00:46:52,680
+it's relatively minimal because the
+
+1187
+00:46:52,680 --> 00:46:55,160
+focus here is not doing very complex
+
+1188
+00:46:55,160 --> 00:46:57,880
+things with the SDK it's really focusing
+
+1189
+00:46:57,880 --> 00:46:59,880
+on prompting so you can scroll through
+
+1190
+00:46:59,880 --> 00:47:01,200
+you can see some examples of good
+
+1191
+00:47:01,200 --> 00:47:03,119
+prompts and bad prompts you can take a
+
+1192
+00:47:03,119 --> 00:47:05,119
+little bit more in-depth of prompt
+
+1193
+00:47:05,119 --> 00:47:06,599
+engineering and the engineering life
+
+1194
+00:47:06,599 --> 00:47:08,640
+cycle all things that we've spoken about
+
+1195
+00:47:08,640 --> 00:47:09,920
+but if you want to see it again and run
+
+1196
+00:47:09,920 --> 00:47:11,760
+some examples this is a great place to
+
+1197
+00:47:11,760 --> 00:47:13,680
+do so and then we got two sections at
+
+1198
+00:47:13,680 --> 00:47:16,319
+the end one for the call summarizer
+
+1199
+00:47:16,319 --> 00:47:18,760
+which builds up a very simple prompt
+
+1200
+00:47:18,760 --> 00:47:21,319
+into more complicated ideas and then the
+
+1201
+00:47:21,319 --> 00:47:23,240
+last example that I definitely recommend
+
+1202
+00:47:23,240 --> 00:47:25,359
+looking through which is essentially the
+
+1203
+00:47:25,359 --> 00:47:27,839
+triaging of a prompt where we start with
+
+1204
+00:47:27,839 --> 00:47:29,880
+a prompt here's all the information that
+
+1205
+00:47:29,880 --> 00:47:33,760
+we get about acne OS we have a system
+
+1206
+00:47:33,760 --> 00:47:35,359
+prompt we have a prompt that seems to be
+
+1207
+00:47:35,359 --> 00:47:37,599
+doing decent enough but here we're going
+
+1208
+00:47:37,599 --> 00:47:39,440
+to start layering on edge cases and
+
+1209
+00:47:39,440 --> 00:47:41,800
+examples and so on so definitely want to
+
+1210
+00:47:41,800 --> 00:47:43,400
+uh point you in that direction for a
+
+1211
+00:47:43,400 --> 00:47:45,480
+really nice resource to practice with
+
+1212
+00:47:45,480 --> 00:47:47,040
+those pieces we'll make sure you all
+
+1213
+00:47:47,040 --> 00:47:49,839
+have a link to that GitHub um as we uh
+
+1214
+00:47:49,839 --> 00:47:52,680
+as we get to wrap up
+
+1215
+00:47:53,559 --> 00:47:56,119
+here going back to rag architecture and
+
+1216
+00:47:56,119 --> 00:47:57,240
+tips I want to wrap up up with this
+
+1217
+00:47:57,240 --> 00:47:59,800
+little piece here retrieval augmented
+
+1218
+00:47:59,800 --> 00:48:01,839
+generation is a super super super super
+
+1219
+00:48:01,839 --> 00:48:03,839
+super common term that you've heard in
+
+1220
+00:48:03,839 --> 00:48:05,040
+this industry and if you have not heard
+
+1221
+00:48:05,040 --> 00:48:07,000
+about it no worries I will explain the
+
+1222
+00:48:07,000 --> 00:48:10,200
+idea the idea here is retrieving
+
+1223
+00:48:10,200 --> 00:48:12,319
+information that your large language
+
+1224
+00:48:12,319 --> 00:48:14,599
+model does not know about or may
+
+1225
+00:48:14,599 --> 00:48:17,000
+partially know about so the most common
+
+1226
+00:48:17,000 --> 00:48:19,359
+example is your company's data your
+
+1227
+00:48:19,359 --> 00:48:22,119
+internal data your own personal family
+
+1228
+00:48:22,119 --> 00:48:25,400
+history even things that are after the
+
+1229
+00:48:25,400 --> 00:48:27,720
+time at which the model has been trained
+
+1230
+00:48:27,720 --> 00:48:31,000
+so if that's after April 2024 or August
+
+1231
+00:48:31,000 --> 00:48:33,160
+23 or whatever the cof date of training
+
+1232
+00:48:33,160 --> 00:48:36,240
+is you might want to augment the
+
+1233
+00:48:36,240 --> 00:48:38,200
+knowledge that your large language model
+
+1234
+00:48:38,200 --> 00:48:41,520
+has with rag most of the work is done
+
+1235
+00:48:41,520 --> 00:48:43,280
+with that R most of the work is done in
+
+1236
+00:48:43,280 --> 00:48:45,200
+that retrieval the augmenting in
+
+1237
+00:48:45,200 --> 00:48:47,240
+generation is simply just taking the
+
+1238
+00:48:47,240 --> 00:48:49,440
+stuff you get back and generating a new
+
+1239
+00:48:49,440 --> 00:48:52,079
+input so the RN rag is really where most
+
+1240
+00:48:52,079 --> 00:48:53,880
+of the work is done but what's the
+
+1241
+00:48:53,880 --> 00:48:55,720
+obvious Advantage here you want to start
+
+1242
+00:48:55,720 --> 00:48:57,640
+using Claud for your own internal
+
+1243
+00:48:57,640 --> 00:48:59,559
+companies's data or you want to make a
+
+1244
+00:48:59,559 --> 00:49:01,480
+knowledge base of your company's
+
+1245
+00:49:01,480 --> 00:49:03,280
+documentation obviously something that
+
+1246
+00:49:03,280 --> 00:49:05,280
+Claude is not trained on this is how we
+
+1247
+00:49:05,280 --> 00:49:07,920
+can augment the llm with external
+
+1248
+00:49:07,920 --> 00:49:10,920
+knowledge a basic rag architecture looks
+
+1249
+00:49:10,920 --> 00:49:14,520
+like this someone asks a question we
+
+1250
+00:49:14,520 --> 00:49:16,079
+take that question and we generate an
+
+1251
+00:49:16,079 --> 00:49:18,640
+embedding which is really just a list of
+
+1252
+00:49:18,640 --> 00:49:19,960
+lots and lots and lots and lots and lots
+
+1253
+00:49:19,960 --> 00:49:21,319
+and lots and lots of floating Point
+
+1254
+00:49:21,319 --> 00:49:23,440
+numbers that represent the semantic
+
+1255
+00:49:23,440 --> 00:49:25,920
+meaning of what we're looking for we
+
+1256
+00:49:25,920 --> 00:49:28,319
+then try to find things that are similar
+
+1257
+00:49:28,319 --> 00:49:30,559
+in semantic meaning in some kind of
+
+1258
+00:49:30,559 --> 00:49:32,799
+database very commonly a vector database
+
+1259
+00:49:32,799 --> 00:49:34,680
+we take all our information that is
+
+1260
+00:49:34,680 --> 00:49:36,680
+external we put it in a vector database
+
+1261
+00:49:36,680 --> 00:49:39,119
+we find similar records and then we take
+
+1262
+00:49:39,119 --> 00:49:41,559
+that data and put it into our prompt and
+
+1263
+00:49:41,559 --> 00:49:43,960
+now Claud can do all of its wonderful
+
+1264
+00:49:43,960 --> 00:49:46,760
+work with this additional context this
+
+1265
+00:49:46,760 --> 00:49:49,000
+is a very simple flow with a rag
+
+1266
+00:49:49,000 --> 00:49:51,319
+architecture this can obviously scale
+
+1267
+00:49:51,319 --> 00:49:53,839
+and get infinitely more complex here's a
+
+1268
+00:49:53,839 --> 00:49:57,000
+basic idea of a rag architecture and rag
+
+1269
+00:49:57,000 --> 00:49:59,400
+setup the things that you have to do to
+
+1270
+00:49:59,400 --> 00:50:01,839
+get this to work you have to have some
+
+1271
+00:50:01,839 --> 00:50:03,920
+information your company's documentation
+
+1272
+00:50:03,920 --> 00:50:05,880
+your company's data your medical records
+
+1273
+00:50:05,880 --> 00:50:07,640
+whatever it may be that you want to
+
+1274
+00:50:07,640 --> 00:50:09,480
+vectorize and you got to put that in a
+
+1275
+00:50:09,480 --> 00:50:12,680
+vector database you then have to take a
+
+1276
+00:50:12,680 --> 00:50:14,760
+query that comes in and embed it using
+
+1277
+00:50:14,760 --> 00:50:17,359
+some embedding model and similar and
+
+1278
+00:50:17,359 --> 00:50:19,119
+find similar searches in your vector
+
+1279
+00:50:19,119 --> 00:50:21,000
+database there are lots of different
+
+1280
+00:50:21,000 --> 00:50:22,240
+tools for this there are lots of
+
+1281
+00:50:22,240 --> 00:50:23,400
+different models that can do these
+
+1282
+00:50:23,400 --> 00:50:26,119
+embeddings vertex has an entire Garden
+
+1283
+00:50:26,119 --> 00:50:28,359
+of tools to help you here so this is
+
+1284
+00:50:28,359 --> 00:50:29,680
+where you can really lean on the the
+
+1285
+00:50:29,680 --> 00:50:31,960
+ecosystem that vertex has and many
+
+1286
+00:50:31,960 --> 00:50:35,440
+different companies offer these
+
+1287
+00:50:36,280 --> 00:50:38,440
+Solutions as we start to shift a bit
+
+1288
+00:50:38,440 --> 00:50:40,200
+more in complexity something that we
+
+1289
+00:50:40,200 --> 00:50:41,440
+haven't covered too much here that we
+
+1290
+00:50:41,440 --> 00:50:43,160
+can maybe cover in a future section it's
+
+1291
+00:50:43,160 --> 00:50:46,440
+the idea of tool use and Tool use is
+
+1292
+00:50:46,440 --> 00:50:49,520
+instead of Claude saying something like
+
+1293
+00:50:49,520 --> 00:50:51,839
+I don't know the answer we can tell
+
+1294
+00:50:51,839 --> 00:50:54,000
+Claude hey if someone's asking about
+
+1295
+00:50:54,000 --> 00:50:55,960
+something like what's the weather right
+
+1296
+00:50:55,960 --> 00:50:59,040
+now or what is a great gift for a
+
+1297
+00:50:59,040 --> 00:51:02,319
+five-year-old in my product catalog
+
+1298
+00:51:02,319 --> 00:51:04,200
+instead of Claude saying I don't know
+
+1299
+00:51:04,200 --> 00:51:05,839
+Claude can actually tell us as the
+
+1300
+00:51:05,839 --> 00:51:07,440
+developer hey looks like someone's
+
+1301
+00:51:07,440 --> 00:51:09,200
+trying to search for some products
+
+1302
+00:51:09,200 --> 00:51:11,760
+here's a tool that I know about go do
+
+1303
+00:51:11,760 --> 00:51:13,880
+what you want with it we can then
+
+1304
+00:51:13,880 --> 00:51:16,280
+programmatically take that information
+
+1305
+00:51:16,280 --> 00:51:18,520
+go ahead and call an API search things
+
+1306
+00:51:18,520 --> 00:51:21,200
+in a database the reason why Rag and
+
+1307
+00:51:21,200 --> 00:51:23,799
+Tool use are used together so commonly
+
+1308
+00:51:23,799 --> 00:51:25,559
+is because many times you don't
+
+1309
+00:51:25,559 --> 00:51:27,760
+necessarily need to jump for embedding
+
+1310
+00:51:27,760 --> 00:51:29,640
+in a vector database and so on if
+
+1311
+00:51:29,640 --> 00:51:32,359
+someone just ask Claude something like
+
+1312
+00:51:32,359 --> 00:51:34,160
+who you know what what is the difference
+
+1313
+00:51:34,160 --> 00:51:35,960
+between the number three and the number
+
+1314
+00:51:35,960 --> 00:51:37,839
+seven Claude can probably give you a
+
+1315
+00:51:37,839 --> 00:51:39,520
+decent answer for that if you ask Claude
+
+1316
+00:51:39,520 --> 00:51:41,680
+a question like can you explain what a
+
+1317
+00:51:41,680 --> 00:51:43,520
+large language model is you might not
+
+1318
+00:51:43,520 --> 00:51:45,760
+need to go and do this embedding and
+
+1319
+00:51:45,760 --> 00:51:48,640
+vectorization and so on so as you get
+
+1320
+00:51:48,640 --> 00:51:49,880
+more comfortable with these pipelines
+
+1321
+00:51:49,880 --> 00:51:52,000
+and these ideas a lot of times you don't
+
+1322
+00:51:52,000 --> 00:51:54,280
+always have to jump for it so this is
+
+1323
+00:51:54,280 --> 00:51:56,119
+just one example and hopefully in the
+
+1324
+00:51:56,119 --> 00:51:57,400
+future session we can talk about tool
+
+1325
+00:51:57,400 --> 00:51:59,520
+use and eals and all sorts of fun things
+
+1326
+00:51:59,520 --> 00:52:00,880
+in this
+
+1327
+00:52:00,880 --> 00:52:03,319
+ecosystem when you have external
+
+1328
+00:52:03,319 --> 00:52:05,960
+documents and you feed them to Claude
+
+1329
+00:52:05,960 --> 00:52:07,960
+the recommended format that we have is
+
+1330
+00:52:07,960 --> 00:52:11,280
+to actually use these XML
+
+1331
+00:52:11,280 --> 00:52:12,920
+tags
+
+1332
+00:52:12,920 --> 00:52:15,200
+documents and then inside have a
+
+1333
+00:52:15,200 --> 00:52:17,760
+document with a source and a document
+
+1334
+00:52:17,760 --> 00:52:19,720
+content this sometimes takes a little
+
+1335
+00:52:19,720 --> 00:52:21,880
+bit of finagling or working with code on
+
+1336
+00:52:21,880 --> 00:52:24,359
+your end but this is how Claude has been
+
+1337
+00:52:24,359 --> 00:52:25,760
+trained on many different kinds of
+
+1338
+00:52:25,760 --> 00:52:27,880
+documents with these particular tags
+
+1339
+00:52:27,880 --> 00:52:29,799
+this also allows you to add a particular
+
+1340
+00:52:29,799 --> 00:52:32,200
+unique identifier for each parts of the
+
+1341
+00:52:32,200 --> 00:52:33,720
+document you can put in your own
+
+1342
+00:52:33,720 --> 00:52:36,160
+metadata as well but this can lead to
+
+1343
+00:52:36,160 --> 00:52:37,960
+much more effective results from
+
+1344
+00:52:37,960 --> 00:52:40,480
+retrieval from systems that Claude is
+
+1345
+00:52:40,480 --> 00:52:42,640
+not aware of out of the box so just a
+
+1346
+00:52:42,640 --> 00:52:44,559
+small little note if you're working with
+
+1347
+00:52:44,559 --> 00:52:47,559
+rag with Claude this is a uh reference
+
+1348
+00:52:47,559 --> 00:52:49,119
+for you to kind of think about that
+
+1349
+00:52:49,119 --> 00:52:51,000
+ingesting and the right way to structure
+
+1350
+00:52:51,000 --> 00:52:52,480
+your
+
+1351
+00:52:52,480 --> 00:52:55,920
+data some tips in the rag ecosystem like
+
+1352
+00:52:55,920 --> 00:52:57,880
+we mentioned the hardest things to do in
+
+1353
+00:52:57,880 --> 00:53:00,960
+rag is the r that retrieval process if
+
+1354
+00:53:00,960 --> 00:53:02,799
+someone puts in a really really really
+
+1355
+00:53:02,799 --> 00:53:04,599
+really really long
+
+1356
+00:53:04,599 --> 00:53:06,559
+query how are we going to figure out
+
+1357
+00:53:06,559 --> 00:53:07,920
+what it is exactly that they're looking
+
+1358
+00:53:07,920 --> 00:53:10,440
+for when we take our company's
+
+1359
+00:53:10,440 --> 00:53:12,640
+documentation we can't just put all the
+
+1360
+00:53:12,640 --> 00:53:14,520
+documentation in one record in the
+
+1361
+00:53:14,520 --> 00:53:16,319
+database we have to break it up into
+
+1362
+00:53:16,319 --> 00:53:18,119
+smaller chunks there's only so much that
+
+1363
+00:53:18,119 --> 00:53:21,160
+we can embed at a time so how do we
+
+1364
+00:53:21,160 --> 00:53:23,280
+preserve the semantic meaning how do we
+
+1365
+00:53:23,280 --> 00:53:25,839
+preserve the order and the accuracy of
+
+1366
+00:53:25,839 --> 00:53:27,720
+our data when we have to literally chop
+
+1367
+00:53:27,720 --> 00:53:29,680
+it up and chop it up and chop it up that
+
+1368
+00:53:29,680 --> 00:53:31,559
+process of chunking is something that
+
+1369
+00:53:31,559 --> 00:53:33,160
+you want to be really mindful of and can
+
+1370
+00:53:33,160 --> 00:53:34,720
+lead to lots of different kinds of
+
+1371
+00:53:34,720 --> 00:53:37,480
+challenges in this ecosystem there's
+
+1372
+00:53:37,480 --> 00:53:38,799
+another really interesting technique
+
+1373
+00:53:38,799 --> 00:53:41,240
+that you can use in rag called reranking
+
+1374
+00:53:41,240 --> 00:53:43,720
+which is where you can take the query
+
+1375
+00:53:43,720 --> 00:53:46,000
+that you have or take the information
+
+1376
+00:53:46,000 --> 00:53:48,000
+that the user is trying to search for
+
+1377
+00:53:48,000 --> 00:53:51,520
+and you can rerank the results by having
+
+1378
+00:53:51,520 --> 00:53:53,760
+a large language model try to rewrite
+
+1379
+00:53:53,760 --> 00:53:55,960
+what the user is looking for to be more
+
+1380
+00:53:55,960 --> 00:53:57,799
+accurate so you can actually use a large
+
+1381
+00:53:57,799 --> 00:54:00,480
+language model to rewrite the query that
+
+1382
+00:54:00,480 --> 00:54:02,920
+the user has to figure out a potential
+
+1383
+00:54:02,920 --> 00:54:04,920
+different ranking for the best possible
+
+1384
+00:54:04,920 --> 00:54:07,599
+option all slightly more advanced ideas
+
+1385
+00:54:07,599 --> 00:54:09,359
+but things that you will probably come
+
+1386
+00:54:09,359 --> 00:54:11,720
+across when hearing about rag hearing
+
+1387
+00:54:11,720 --> 00:54:14,400
+this terminology and so
+
+1388
+00:54:14,400 --> 00:54:17,240
+on rag has been kind of the deao
+
+1389
+00:54:17,240 --> 00:54:19,160
+solution that many many many folks do
+
+1390
+00:54:19,160 --> 00:54:21,839
+reach for but as we evolve in this
+
+1391
+00:54:21,839 --> 00:54:23,720
+ecosystem kind of want to just put some
+
+1392
+00:54:23,720 --> 00:54:25,559
+things in your brain for what might
+
+1393
+00:54:25,559 --> 00:54:28,200
+change in the future as we go along so
+
+1394
+00:54:28,200 --> 00:54:30,480
+as more optimizations come out external
+
+1395
+00:54:30,480 --> 00:54:32,920
+knowledge search will absolutely improve
+
+1396
+00:54:32,920 --> 00:54:35,119
+external knowledge search is a essential
+
+1397
+00:54:35,119 --> 00:54:37,160
+part of what you do when working with
+
+1398
+00:54:37,160 --> 00:54:39,000
+large language models can be great to
+
+1399
+00:54:39,000 --> 00:54:40,559
+talk to an llm but if you're using this
+
+1400
+00:54:40,559 --> 00:54:42,119
+for your company you're going to have
+
+1401
+00:54:42,119 --> 00:54:44,200
+your own kind of knowledge that you need
+
+1402
+00:54:44,200 --> 00:54:46,799
+to be retrieved rag is a great solution
+
+1403
+00:54:46,799 --> 00:54:48,760
+out of the box but it runs into some
+
+1404
+00:54:48,760 --> 00:54:50,880
+problems especially with making sure
+
+1405
+00:54:50,880 --> 00:54:52,920
+you're getting accurate results making
+
+1406
+00:54:52,920 --> 00:54:53,960
+sure you're being efficient in your
+
+1407
+00:54:53,960 --> 00:54:56,440
+searching can be tweaked a lot but some
+
+1408
+00:54:56,440 --> 00:54:58,200
+Alternatives as we start getting more
+
+1409
+00:54:58,200 --> 00:55:00,119
+and more in this ecosystem prompt
+
+1410
+00:55:00,119 --> 00:55:01,920
+caching is a technique that is becoming
+
+1411
+00:55:01,920 --> 00:55:04,040
+more and more popular prompt caching is
+
+1412
+00:55:04,040 --> 00:55:06,319
+the idea where we're sending really long
+
+1413
+00:55:06,319 --> 00:55:07,880
+conversations we're putting lots of
+
+1414
+00:55:07,880 --> 00:55:09,880
+information in the context but after
+
+1415
+00:55:09,880 --> 00:55:12,040
+each message we have to recreate all
+
+1416
+00:55:12,040 --> 00:55:13,559
+those tokens again we to generate all
+
+1417
+00:55:13,559 --> 00:55:15,680
+those tokens again can we instead kind
+
+1418
+00:55:15,680 --> 00:55:18,400
+of take a picture take a snapshot take
+
+1419
+00:55:18,400 --> 00:55:20,559
+those tokens and store them in a cash so
+
+1420
+00:55:20,559 --> 00:55:22,319
+that we don't have to keep tokenizing
+
+1421
+00:55:22,319 --> 00:55:24,000
+regenerating tokens over and over and
+
+1422
+00:55:24,000 --> 00:55:26,880
+over again this would allow us we put
+
+1423
+00:55:26,880 --> 00:55:29,640
+lots of information in a prompt tons of
+
+1424
+00:55:29,640 --> 00:55:31,720
+information that normally every time
+
+1425
+00:55:31,720 --> 00:55:34,280
+might take too long to load but instead
+
+1426
+00:55:34,280 --> 00:55:36,240
+we can take all this information we can
+
+1427
+00:55:36,240 --> 00:55:38,319
+cash it so that when we look at it again
+
+1428
+00:55:38,319 --> 00:55:40,440
+we're going to load it much much faster
+
+1429
+00:55:40,440 --> 00:55:42,000
+so can you take some of that
+
+1430
+00:55:42,000 --> 00:55:44,319
+documentation and instead of a external
+
+1431
+00:55:44,319 --> 00:55:45,640
+data source you can just put it in the
+
+1432
+00:55:45,640 --> 00:55:48,400
+prompt and cach it as larger context
+
+1433
+00:55:48,400 --> 00:55:50,599
+Windows come in as the amount of total
+
+1434
+00:55:50,599 --> 00:55:52,400
+amount of tokens that we can have over
+
+1435
+00:55:52,400 --> 00:55:53,920
+the course of an entire conversation
+
+1436
+00:55:53,920 --> 00:55:55,880
+grows we're getting to you know levels
+
+1437
+00:55:55,880 --> 00:55:58,240
+of 100 of thousands million and so on
+
+1438
+00:55:58,240 --> 00:56:00,119
+this might avoid the need for rag
+
+1439
+00:56:00,119 --> 00:56:01,680
+because we can just put everything in
+
+1440
+00:56:01,680 --> 00:56:03,960
+the context window as we have better
+
+1441
+00:56:03,960 --> 00:56:05,359
+embedding models as we have different
+
+1442
+00:56:05,359 --> 00:56:07,520
+kinds of data stores this will continue
+
+1443
+00:56:07,520 --> 00:56:10,720
+to only improve so rag is something that
+
+1444
+00:56:10,720 --> 00:56:11,960
+I don't know what it'll look like over
+
+1445
+00:56:11,960 --> 00:56:13,839
+the next six months or year or so on but
+
+1446
+00:56:13,839 --> 00:56:15,640
+it is constantly going through changes
+
+1447
+00:56:15,640 --> 00:56:18,640
+iterations and
+
+1448
+00:56:20,200 --> 00:56:23,839
+improvements all right we have some
+
+1449
+00:56:23,839 --> 00:56:25,400
+awesome questions I can tell people are
+
+1450
+00:56:25,400 --> 00:56:26,960
+really enjoying this session because
+
+1451
+00:56:26,960 --> 00:56:28,720
+we've got some very specific questions
+
+1452
+00:56:28,720 --> 00:56:32,400
+for you Ellie so I'll start with this
+
+1453
+00:56:32,400 --> 00:56:35,160
+first one uh this was from Charlie and
+
+1454
+00:56:35,160 --> 00:56:38,680
+Charlie asks what are some cool use
+
+1455
+00:56:38,680 --> 00:56:41,480
+cases you've seen using prompt
+
+1456
+00:56:41,480 --> 00:56:44,319
+engineering wow um cool use cases that
+
+1457
+00:56:44,319 --> 00:56:46,160
+I've seen using prompt engineering there
+
+1458
+00:56:46,160 --> 00:56:48,960
+is a uh a tremendous amount here I think
+
+1459
+00:56:48,960 --> 00:56:50,520
+some of the most impressive things that
+
+1460
+00:56:50,520 --> 00:56:51,680
+I've seen or some of the things that I'm
+
+1461
+00:56:51,680 --> 00:56:54,960
+personally most excited about are the
+
+1462
+00:56:54,960 --> 00:56:57,359
+medical field and the amount of research
+
+1463
+00:56:57,359 --> 00:56:58,880
+that we can do or the Partnerships that
+
+1464
+00:56:58,880 --> 00:57:01,039
+we can establish to drive Innovation
+
+1465
+00:57:01,039 --> 00:57:03,440
+forward in the space to honestly just
+
+1466
+00:57:03,440 --> 00:57:05,440
+make the world a better place in general
+
+1467
+00:57:05,440 --> 00:57:07,160
+there is so much that is unknown and
+
+1468
+00:57:07,160 --> 00:57:08,440
+there's only more that's going to be
+
+1469
+00:57:08,440 --> 00:57:12,240
+known by using llms and such in terms of
+
+1470
+00:57:12,240 --> 00:57:14,559
+the general day-to-day use cases for
+
+1471
+00:57:14,559 --> 00:57:16,480
+things like prompt engineering we've
+
+1472
+00:57:16,480 --> 00:57:19,480
+just seen so many customers go from
+
+1473
+00:57:19,480 --> 00:57:21,240
+seeing data that they're not expecting
+
+1474
+00:57:21,240 --> 00:57:22,799
+or things are not great or things are
+
+1475
+00:57:22,799 --> 00:57:24,960
+hallucinating and just by following the
+
+1476
+00:57:24,960 --> 00:57:26,880
+steps in the meta prompter
+
+1477
+00:57:26,880 --> 00:57:28,599
+even just 10 15 minutes of triaging
+
+1478
+00:57:28,599 --> 00:57:30,599
+debugging just leads to a completely
+
+1479
+00:57:30,599 --> 00:57:32,559
+different result so the thing that I'm
+
+1480
+00:57:32,559 --> 00:57:34,280
+actually excited about is just trying to
+
+1481
+00:57:34,280 --> 00:57:36,240
+get people to not necessarily give up if
+
+1482
+00:57:36,240 --> 00:57:37,839
+the llm is not giving you what you want
+
+1483
+00:57:37,839 --> 00:57:39,640
+out of the box kind of lean into these
+
+1484
+00:57:39,640 --> 00:57:41,799
+steps but long-term the medical space
+
+1485
+00:57:41,799 --> 00:57:44,039
+shortterm just seeing customer customer
+
+1486
+00:57:44,039 --> 00:57:46,440
+wins across so many different use cases
+
+1487
+00:57:46,440 --> 00:57:48,119
+um customer support obviously chat Bots
+
+1488
+00:57:48,119 --> 00:57:50,240
+are a big piece um Financial tools
+
+1489
+00:57:50,240 --> 00:57:53,000
+there's just so much you can do here
+
+1490
+00:57:53,000 --> 00:57:54,359
+yeah solving that issue of always having
+
+1491
+00:57:54,359 --> 00:57:56,880
+to be like agent agent getting to those
+
+1492
+00:57:56,880 --> 00:58:00,559
+answers uh more
+
+1493
+00:58:00,799 --> 00:58:03,839
+efficiently all right this next one is
+
+1494
+00:58:03,839 --> 00:58:06,400
+from John John asks is the prompt
+
+1495
+00:58:06,400 --> 00:58:08,799
+engineering dashboard available for
+
+1496
+00:58:08,799 --> 00:58:10,359
+professional accounts or business
+
+1497
+00:58:10,359 --> 00:58:12,880
+accounts or is this a separate product
+
+1498
+00:58:12,880 --> 00:58:14,760
+so the the the dashboard I guess that
+
+1499
+00:58:14,760 --> 00:58:17,039
+you saw the kind of workbench and so on
+
+1500
+00:58:17,039 --> 00:58:18,839
+um as long as you have an anthropic
+
+1501
+00:58:18,839 --> 00:58:20,400
+account that is something that you can
+
+1502
+00:58:20,400 --> 00:58:22,559
+use and whether you are part of cloud
+
+1503
+00:58:22,559 --> 00:58:24,400
+for work or Enterprise or doing this
+
+1504
+00:58:24,400 --> 00:58:25,599
+individually as long as you have an
+
+1505
+00:58:25,599 --> 00:58:27,640
+account you can go ahead and use that
+
+1506
+00:58:27,640 --> 00:58:29,760
+you'll need to set up a you know API key
+
+1507
+00:58:29,760 --> 00:58:30,960
+for yourself there's some billing that
+
+1508
+00:58:30,960 --> 00:58:33,039
+needs to happen but it is extremely easy
+
+1509
+00:58:33,039 --> 00:58:34,839
+to get started for individuals and then
+
+1510
+00:58:34,839 --> 00:58:36,119
+organizations can share those
+
+1511
+00:58:36,119 --> 00:58:37,520
+workbenches as
+
+1512
+00:58:37,520 --> 00:58:41,760
+well great this question is from Jan or
+
+1513
+00:58:41,760 --> 00:58:44,480
+Yan perhaps uh do the prompt
+
+1514
+00:58:44,480 --> 00:58:46,920
+improvements discussed here take part
+
+1515
+00:58:46,920 --> 00:58:48,760
+when doing meta
+
+1516
+00:58:48,760 --> 00:58:51,000
+prompting yeah absolutely that's a
+
+1517
+00:58:51,000 --> 00:58:53,440
+fantastic question so we uh we have a
+
+1518
+00:58:53,440 --> 00:58:56,280
+entire team focused on prompt engineer
+
+1519
+00:58:56,280 --> 00:58:59,319
+Ing and research and all that they do is
+
+1520
+00:58:59,319 --> 00:59:01,039
+really just try to meta prompt The Meta
+
+1521
+00:59:01,039 --> 00:59:02,960
+prompt and figure out all different
+
+1522
+00:59:02,960 --> 00:59:04,760
+kinds of ways especially as our models
+
+1523
+00:59:04,760 --> 00:59:07,599
+evolve as our models get smarter as the
+
+1524
+00:59:07,599 --> 00:59:09,280
+techniques that maybe once worked for
+
+1525
+00:59:09,280 --> 00:59:12,839
+things like Claude one or two or 21 have
+
+1526
+00:59:12,839 --> 00:59:14,680
+totally changed we are constantly
+
+1527
+00:59:14,680 --> 00:59:17,000
+iterating on that meta prompter and
+
+1528
+00:59:17,000 --> 00:59:18,760
+we've made the uh The Meta prompter
+
+1529
+00:59:18,760 --> 00:59:20,240
+completely available it's a Jupiter
+
+1530
+00:59:20,240 --> 00:59:21,359
+notebook you can find it in our
+
+1531
+00:59:21,359 --> 00:59:23,039
+documentation so that's something that
+
+1532
+00:59:23,039 --> 00:59:25,200
+we've you know shared with the entire
+
+1533
+00:59:25,200 --> 00:59:26,839
+world but it's also something that we're
+
+1534
+00:59:26,839 --> 00:59:29,319
+constantly iterating on so every day
+
+1535
+00:59:29,319 --> 00:59:30,599
+every week or so there're always little
+
+1536
+00:59:30,599 --> 00:59:32,280
+things little tweaks that we try to
+
+1537
+00:59:32,280 --> 00:59:33,680
+think about to incorporate to just
+
+1538
+00:59:33,680 --> 00:59:35,319
+deliver the best quality
+
+1539
+00:59:35,319 --> 00:59:40,079
+prompts nice all right James asks how
+
+1540
+00:59:40,079 --> 00:59:42,599
+would you apply vows to more complex
+
+1541
+00:59:42,599 --> 00:59:45,720
+workflows such as multi-agent workflows
+
+1542
+00:59:45,720 --> 00:59:49,280
+that utilize tools as part of the task
+
+1543
+00:59:49,280 --> 00:59:51,960
+excellent excellent question um well you
+
+1544
+00:59:51,960 --> 00:59:52,880
+have to you have to bring me back to
+
+1545
+00:59:52,880 --> 00:59:54,359
+talk about evals but in this one
+
+1546
+00:59:54,359 --> 00:59:55,799
+question I will I will definitely tell
+
+1547
+00:59:55,799 --> 00:59:56,559
+you
+
+1548
+00:59:56,559 --> 00:59:57,640
+there are lots of different ways for
+
+1549
+00:59:57,640 --> 01:00:00,280
+doing evals there is the very tedious
+
+1550
+01:00:00,280 --> 01:00:02,280
+human grading side of things which you
+
+1551
+01:00:02,280 --> 01:00:04,000
+know even we point towards you want to
+
+1552
+01:00:04,000 --> 01:00:05,119
+try to avoid that because it just
+
+1553
+01:00:05,119 --> 01:00:07,000
+doesn't scale for things like
+
+1554
+01:00:07,000 --> 01:00:09,200
+multi-agent use or step-by-step
+
+1555
+01:00:09,200 --> 01:00:12,359
+processes the best thing to do is to
+
+1556
+01:00:12,359 --> 01:00:14,880
+start with evals on each of those
+
+1557
+01:00:14,880 --> 01:00:17,079
+individual levels because if the eval
+
+1558
+01:00:17,079 --> 01:00:18,799
+for example is you expect some kind of
+
+1559
+01:00:18,799 --> 01:00:20,599
+large agentic workflow to produce some
+
+1560
+01:00:20,599 --> 01:00:22,520
+output and then the eval is just is the
+
+1561
+01:00:22,520 --> 01:00:24,799
+output what I want unless you've set up
+
+1562
+01:00:24,799 --> 01:00:27,359
+everything so prop L and correctly it's
+
+1563
+01:00:27,359 --> 01:00:28,520
+unlikely that you're going to get the
+
+1564
+01:00:28,520 --> 01:00:30,039
+results you want and then debugging and
+
+1565
+01:00:30,039 --> 01:00:32,119
+triaging is going to be very difficult
+
+1566
+01:00:32,119 --> 01:00:33,280
+so the same way that you would write
+
+1567
+01:00:33,280 --> 01:00:34,799
+unit tests and then on top of that write
+
+1568
+01:00:34,799 --> 01:00:36,839
+integration tests I would try to lean on
+
+1569
+01:00:36,839 --> 01:00:39,160
+that same kind of philosophy and idea
+
+1570
+01:00:39,160 --> 01:00:40,839
+when you are testing things again
+
+1571
+01:00:40,839 --> 01:00:42,559
+depends on your use case sometimes
+
+1572
+01:00:42,559 --> 01:00:44,440
+programmatically it can be as simple as
+
+1573
+01:00:44,440 --> 01:00:46,039
+I expect that the output contains this
+
+1574
+01:00:46,039 --> 01:00:47,640
+word I expect that the output contains
+
+1575
+01:00:47,640 --> 01:00:50,039
+these particular pieces sometimes you
+
+1576
+01:00:50,039 --> 01:00:51,920
+also need to use an llm to do some of
+
+1577
+01:00:51,920 --> 01:00:53,720
+the grading as well so especially with
+
+1578
+01:00:53,720 --> 01:00:55,640
+agentic workflows we've seen models
+
+1579
+01:00:55,640 --> 01:00:57,400
+grading other models specifically models
+
+1580
+01:00:57,400 --> 01:00:58,680
+with different tiers of intelligence
+
+1581
+01:00:58,680 --> 01:01:01,359
+grading other models on certain parts of
+
+1582
+01:01:01,359 --> 01:01:03,280
+the process so this is where the same
+
+1583
+01:01:03,280 --> 01:01:04,799
+way that you have a agentic workflow
+
+1584
+01:01:04,799 --> 01:01:06,359
+with lots of different steps you now
+
+1585
+01:01:06,359 --> 01:01:08,079
+have an evaluation Suite with lots of
+
+1586
+01:01:08,079 --> 01:01:09,960
+different steps checking things along
+
+1587
+01:01:09,960 --> 01:01:11,760
+the way so that if the output is not
+
+1588
+01:01:11,760 --> 01:01:13,000
+what you want you know kind of how
+
+1589
+01:01:13,000 --> 01:01:15,960
+things are G to throughout that
+
+1590
+01:01:15,960 --> 01:01:19,280
+process great all right we have a
+
+1591
+01:01:19,280 --> 01:01:23,000
+question from Saba Saba asks Dynamic
+
+1592
+01:01:23,000 --> 01:01:27,079
+content SL rag step two also covers
+
+1593
+01:01:27,079 --> 01:01:30,760
+tools listing how about chat history
+
+1594
+01:01:30,760 --> 01:01:33,079
+what should be the order of rag doc
+
+1595
+01:01:33,079 --> 01:01:36,799
+Snippets tool function listing tool
+
+1596
+01:01:36,799 --> 01:01:39,640
+return results and chat history
+
+1597
+01:01:39,640 --> 01:01:43,240
+definitely so the the chat history um if
+
+1598
+01:01:43,240 --> 01:01:44,920
+you if you have a a prompt and you're
+
+1599
+01:01:44,920 --> 01:01:46,520
+then injecting the chat history that's a
+
+1600
+01:01:46,520 --> 01:01:47,640
+little bit different if you have the
+
+1601
+01:01:47,640 --> 01:01:48,920
+entire kind of back and forth
+
+1602
+01:01:48,920 --> 01:01:50,319
+conversation the chat history is
+
+1603
+01:01:50,319 --> 01:01:52,480
+preserved so I'll start kind of with the
+
+1604
+01:01:52,480 --> 01:01:54,799
+tool side of things the tool definitions
+
+1605
+01:01:54,799 --> 01:01:57,359
+come in when The Prompt is created so
+
+1606
+01:01:57,359 --> 01:01:58,920
+there's a key called tools and you pass
+
+1607
+01:01:58,920 --> 01:02:01,279
+in the definition of your tools but in
+
+1608
+01:02:01,279 --> 01:02:03,480
+terms of what you want the ideal output
+
+1609
+01:02:03,480 --> 01:02:05,680
+to look like with a particular tool or
+
+1610
+01:02:05,680 --> 01:02:07,279
+you want to give some examples of what
+
+1611
+01:02:07,279 --> 01:02:08,960
+that tool might look like that just goes
+
+1612
+01:02:08,960 --> 01:02:11,200
+in the examples section so any
+
+1613
+01:02:11,200 --> 01:02:13,640
+possibility for that endot or five shot
+
+1614
+01:02:13,640 --> 01:02:15,599
+or 10 shot prompting think of those kind
+
+1615
+01:02:15,599 --> 01:02:18,520
+of tools as the place to put that there
+
+1616
+01:02:18,520 --> 01:02:20,680
+uh rag again kind of top of the document
+
+1617
+01:02:20,680 --> 01:02:22,240
+and dynamic information that's where I
+
+1618
+01:02:22,240 --> 01:02:24,599
+would put that content and then for the
+
+1619
+01:02:24,599 --> 01:02:26,720
+chat history depending on kind of where
+
+1620
+01:02:26,720 --> 01:02:27,920
+you're storing the history that might be
+
+1621
+01:02:27,920 --> 01:02:29,520
+a little bit tricky but that also would
+
+1622
+01:02:29,520 --> 01:02:31,720
+be kind of in your examples section so
+
+1623
+01:02:31,720 --> 01:02:33,079
+breaking those breaking those three
+
+1624
+01:02:33,079 --> 01:02:35,039
+areas apart is what I would
+
+1625
+01:02:35,039 --> 01:02:37,799
+do great and then I think we have time
+
+1626
+01:02:37,799 --> 01:02:40,160
+for one more question let's take this
+
+1627
+01:02:40,160 --> 01:02:44,279
+one from Chris uh Chris asks does Claude
+
+1628
+01:02:44,279 --> 01:02:46,599
+have a sense of how certain it is in its
+
+1629
+01:02:46,599 --> 01:02:50,400
+answer can it give a useful confidence
+
+1630
+01:02:50,400 --> 01:02:52,960
+score that's a fantastic fantastic
+
+1631
+01:02:52,960 --> 01:02:54,599
+question so there is a tremendous amount
+
+1632
+01:02:54,599 --> 01:02:57,279
+of research that we do about how Claud
+
+1633
+01:02:57,279 --> 01:02:59,200
+gets to the answer the entire field of
+
+1634
+01:02:59,200 --> 01:03:00,599
+interpretability trying to figure out
+
+1635
+01:03:00,599 --> 01:03:01,760
+kind of what's Happening under the hood
+
+1636
+01:03:01,760 --> 01:03:04,200
+at the neuron level right out of the box
+
+1637
+01:03:04,200 --> 01:03:06,000
+there there is no way to have a kind of
+
+1638
+01:03:06,000 --> 01:03:08,640
+confidence score and so on the way that
+
+1639
+01:03:08,640 --> 01:03:10,000
+you can try to get more of those
+
+1640
+01:03:10,000 --> 01:03:12,200
+accuracy scores are when you use tools
+
+1641
+01:03:12,200 --> 01:03:14,799
+like rag where you can basically ask
+
+1642
+01:03:14,799 --> 01:03:16,359
+from the query that the person has put
+
+1643
+01:03:16,359 --> 01:03:19,799
+in what is the similarity to other
+
+1644
+01:03:19,799 --> 01:03:21,680
+records that we have or other embeddings
+
+1645
+01:03:21,680 --> 01:03:23,400
+that we have what is that kind of
+
+1646
+01:03:23,400 --> 01:03:25,520
+similarity score and there's a metric
+
+1647
+01:03:25,520 --> 01:03:26,839
+called cosine similarity there are a
+
+1648
+01:03:26,839 --> 01:03:28,079
+couple other metrics that kind of give
+
+1649
+01:03:28,079 --> 01:03:31,559
+you a level of accuracy or similarity
+
+1650
+01:03:31,559 --> 01:03:32,400
+that's where you'll see a little bit
+
+1651
+01:03:32,400 --> 01:03:33,880
+more of that kind of confidence score
+
+1652
+01:03:33,880 --> 01:03:35,920
+like you know red or yellow or green or
+
+1653
+01:03:35,920 --> 01:03:37,839
+a 66% chance that this is what you're
+
+1654
+01:03:37,839 --> 01:03:39,720
+looking for but out of the box if you
+
+1655
+01:03:39,720 --> 01:03:41,359
+ask Claud something and you say you know
+
+1656
+01:03:41,359 --> 01:03:42,839
+on a scale to 10 zero to 10 how
+
+1657
+01:03:42,839 --> 01:03:44,680
+confident are you um you're gonna have a
+
+1658
+01:03:44,680 --> 01:03:46,079
+hard time kind of getting that uh that
+
+1659
+01:03:46,079 --> 01:03:48,079
+measure to be pretty
+
+1660
+01:03:48,079 --> 01:03:50,319
+sustainable I li we have time for one
+
+1661
+01:03:50,319 --> 01:03:51,640
+more question so I'm going to sneak one
+
+1662
+01:03:51,640 --> 01:03:55,480
+more in for you um this is from Linda
+
+1663
+01:03:55,480 --> 01:03:58,119
+how does Claude handle potential
+
+1664
+01:03:58,119 --> 01:04:00,799
+inconsistencies or contradictions in
+
+1665
+01:04:00,799 --> 01:04:02,440
+retrieved
+
+1666
+01:04:02,440 --> 01:04:04,160
+information these are excellent
+
+1667
+01:04:04,160 --> 01:04:07,760
+questions so when there are potential
+
+1668
+01:04:07,760 --> 01:04:09,799
+inconsistencies it's it's hard for Claud
+
+1669
+01:04:09,799 --> 01:04:11,400
+to kind of know historically what all
+
+1670
+01:04:11,400 --> 01:04:13,599
+the inconsistencies have been and such
+
+1671
+01:04:13,599 --> 01:04:15,400
+so this kind of goes back to the this is
+
+1672
+01:04:15,400 --> 01:04:17,160
+where the r in retrieval is a tricky
+
+1673
+01:04:17,160 --> 01:04:18,760
+process this is where reranking can also
+
+1674
+01:04:18,760 --> 01:04:21,559
+be really helpful but at the same time
+
+1675
+01:04:21,559 --> 01:04:24,559
+you can still always ask Claude for site
+
+1676
+01:04:24,559 --> 01:04:26,720
+site the sources make sure that the data
+
+1677
+01:04:26,720 --> 01:04:28,760
+here has been backed by sources and show
+
+1678
+01:04:28,760 --> 01:04:30,599
+me where you found these sources and
+
+1679
+01:04:30,599 --> 01:04:31,920
+that's always a really helpful way to
+
+1680
+01:04:31,920 --> 01:04:34,559
+kind of ground CLA in the truth the same
+
+1681
+01:04:34,559 --> 01:04:35,880
+way that you want to just make sure that
+
+1682
+01:04:35,880 --> 01:04:37,079
+if there's a world in which the answer
+
+1683
+01:04:37,079 --> 01:04:39,119
+is not known you can have Cloud just
+
+1684
+01:04:39,119 --> 01:04:40,680
+explicitly say I don't know and make
+
+1685
+01:04:40,680 --> 01:04:42,000
+sure that that's part of your prompt as
+
+1686
+01:04:42,000 --> 01:04:44,119
+well so it's a a slightly more difficult
+
+1687
+01:04:44,119 --> 01:04:46,400
+thing to do past the retrieval stage
+
+1688
+01:04:46,400 --> 01:04:47,559
+because that's really where the data is
+
+1689
+01:04:47,559 --> 01:04:48,880
+being retrieved and it's hard for Quad
+
+1690
+01:04:48,880 --> 01:04:51,119
+to say you're embedding model was wrong
+
+1691
+01:04:51,119 --> 01:04:52,880
+that's not really possible but you can
+
+1692
+01:04:52,880 --> 01:04:54,440
+still do your best to kind of stop
+
+1693
+01:04:54,440 --> 01:04:56,880
+things and use claw as your last
+
+1694
+01:04:56,880 --> 01:05:00,240
+defense great well I have learned so
+
+1695
+01:05:00,240 --> 01:05:02,920
+much today thank you so much for sharing
+
+1696
+01:05:02,920 --> 01:05:05,000
+all of these best practices any any
+
+1697
+01:05:05,000 --> 01:05:06,839
+parting thoughts wisdom you want to
+
+1698
+01:05:06,839 --> 01:05:09,839
+share with our audience uh about prompt
+
+1699
+01:05:09,839 --> 01:05:12,480
+engineering anthropic XML
+
+1700
+01:05:12,480 --> 01:05:16,079
+tags XL tags where um no I think the you
+
+1701
+01:05:16,079 --> 01:05:17,559
+know follow that Golden Rule with
+
+1702
+01:05:17,559 --> 01:05:19,680
+prompting really try to treat prompt
+
+1703
+01:05:19,680 --> 01:05:21,480
+engineering as a science instead of an
+
+1704
+01:05:21,480 --> 01:05:23,720
+art and if the first thing you get back
+
+1705
+01:05:23,720 --> 01:05:26,039
+from the llm is not what you expect do
+
+1706
+01:05:26,039 --> 01:05:27,799
+your best to not get too frustrated and
+
+1707
+01:05:27,799 --> 01:05:29,960
+realize there's an entire world of
+
+1708
+01:05:29,960 --> 01:05:31,920
+evolving to get what you're looking
+
+1709
+01:05:31,920 --> 01:05:35,240
+for wonderful well thank you so much
+
+1710
+01:05:35,240 --> 01:05:37,319
+Ellie and this has been so exciting to
+
+1711
+01:05:37,319 --> 01:05:40,200
+have uh real use cases and examples
+
+1712
+01:05:40,200 --> 01:05:42,200
+shown on the show so thank you so much
+
+1713
+01:05:42,200 --> 01:05:43,760
+for speaking to our audience today and
+
+1714
+01:05:43,760 --> 01:05:45,839
+I'm sure we gonna get a lot of folks uh
+
+1715
+01:05:45,839 --> 01:05:47,839
+maybe tweeting you reaching out asking
+
+1716
+01:05:47,839 --> 01:05:50,680
+questions um and that is the end of our
+
+1717
+01:05:50,680 --> 01:05:52,799
+stream today thank you so much for
+
+1718
+01:05:52,799 --> 01:05:54,079
+everybody who joined us live or if
+
+1719
+01:05:54,079 --> 01:05:56,599
+you're joining us on demand in the in
+
+1720
+01:05:56,599 --> 01:06:00,799
+the future hello uh and we will wrap up
+
+1721
+01:06:00,799 --> 01:06:03,599
+today's session thanks everyone thank
+
+1722
+01:06:03,599 --> 01:06:06,920
+you so much
+
+1723
+01:06:08,970 --> 01:06:12,030
+[Music]
+
+1724
+01:06:25,880 --> 01:06:28,880
+h
+
+1725
+01:07:12,200 --> 01:07:15,200
+t
+
+1726
+01:07:16,080 --> 01:07:19,239
+[Music]
